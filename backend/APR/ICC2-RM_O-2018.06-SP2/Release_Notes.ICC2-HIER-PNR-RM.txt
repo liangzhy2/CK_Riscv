@@ -1,0 +1,459 @@
+###############################################################################
+# Synopsys(R) IC Compiler(TM) II Hierarchical P&R Reference Methodology
+# Version: O-2018.06-SP2 (October 8, 2018)
+# Copyright (C) 2014-2018 Synopsys, Inc. All rights reserved.
+###############################################################################
+
+N-2017.09-SP2 Updates
+==================
+Updates to icc2_pnr_setup.tcl
+  * For blocks with multiple levels of physical hierarchy, creation of flattened abstracts is now supported.
+Use the newly added ABSTRACT_TYPE_FOR_MPH_BLOCKS variable to specify the type of abstract (nested or flattened) to be created
+  * You can now check the consistency of timing constraints between block and top during the check_design command. Use the
+newly added CHECK_HIER_TIMING_CONSTRAINTS_CONSISTENCY variable to enable this feature. 
+  * Consequent to the changes to the chip_finish and signoff_drc steps in FLAT-PNR-RM, the BLOCK_ABSTRACT_FOR_* variables are updated from 
+CHIP_FINISH_BLOCK_NAME to ICV_IN_DESIGN_BLOCK_NAME
+
+
+N-2017.09 Updates
+==================
+Updates to init_design.tcl
+  * Editability of the sub-blocks is set to false using the set_editability command
+
+Updates to place_opt.tcl
+  * Editability of the sub-blocks is checked and set to false. This is done to ensure that 
+the editability of the sub-blocks is set to false in flows not running the init_design.tcl script
+
+M-2016.12-SP4 Updates
+==================
+###############################################################################
+#Performance, power, and area (PPA) related changes
+################################################################################
+Updates to route_opt.tcl
+  * PrimeTime delay calculation based route_opt command is now supported for hierarchical designs
+
+M-2016.12-SP2 Updates
+==================
+############################################################
+##Updates for the chip finish step
+##############################################################
+* Starting with this release, you can create abstracts that can
+  be used for signal electromigration analysis in the next level 
+  above of physical hierarchy.
+
+  To do so, set the USE_ABSTRACTS_FOR_SIGNAL_EM_ANALYSIS variable in
+  the ./rm_setup/icc2_pnr_setup.tcl file to true. This sets the
+  abstract.enable_signal_em_analysis application option to true before
+  the create_abstract command 
+
+
+M-2016.12 Updates
+==================
+############################################################
+##Updates for all place and route steps
+##############################################################
+* Starting with this release, you can ignore timing paths that are completely 
+  internal to sub-blocks by using the set_timing_paths_disabled_blocks command.
+
+############################################################
+###Updates for init_design.tcl
+###############################################################
+* When INIT_DESIGN_INPUT = ASCII, at the top or intermediate
+  levels of the physical hierarchy, the top design is now linked to
+  sub-blocks with the BLOCK_ABSTRACT_FOR_PLACE_OPT label
+
+L-2016.03-SP5 Updates
+======================
+############################################################
+#Updates for all place and route steps
+#############################################################
+* Removed
+  For top or intermediate levels of hierarchical designs, association of power
+  management cells  to UPF strategies was being redone in each script. Since
+  the association is now persistant, this is removed 
+
+L-2016.03-SP4 Updates
+======================
+############################################################
+#Updates for all place and route steps
+#############################################################
+* Starting with this release, you can create abstracts with power information and use it for
+  power analysis in the next upper level of physical hierarchy.
+
+  For this, set the USE_ABSTRACTS_FOR_POWER_ANALYSIS variable in ./rm_setup/icc2_pnr_setup.tcl 
+  to true. This in turn sets the application option abstract.annotate_power to true before the 
+  create_abstract command in each of the implementation scripts
+
+############################################################
+##Updates for place_opt (settings.step.place_opt.tcl)
+##############################################################
+* Prior to this release, global route based buffering during 
+  HFS/DRC fixing was explicitly disabled at top or intermediate
+  levels for hierarchical designs. This restriction is now removed.
+
+############################################################
+###Updates for report_qor.tcl
+###############################################################
+* When USE_ABSTRACTS_FOR_POWER_ANALYSIS is set to true in rm_setup/icc2_pnr_setup.tcl, 
+  report_power will report the power consumed by top and sub-blocks separately 
+  using the report_power -blocks command 
+
+L-2016.03-SP2 Updates
+======================
+############################################################
+Updates for all place and route steps
+############################################################
+Starting with version L-2016.03-SP2, the change_abstract command is performed 
+only when the abstract chosen for the current implementation step differs
+from the abstract used for the previous implementation step.
+
+For example, in the clock_opt_cts step, the change_abstract command is 
+run only when $BLOCK_ABSTRACT_FOR_CLOCK_OPT_CTS differs from 
+$BLOCK_ABSTRACT_FOR_PLACE_OPT.
+
+############################################################
+Updates for clock_opt_cts
+############################################################
+* Replaced promote_constraints with promote_clock_data to align with new UI
+* Changed the promotion of the clock balance points from subblocks to 
+  off-by-default. This is now controlled by the PROMOTE_CLOCK_BALANCE_POINTS 
+  variable.
+
+############################################################
+Updates for designs using ETMs
+############################################################
+* Added the WRITE_DATA_FOR_ETM_BLOCK_NAME variable to enable writing out ASCII 
+  data needed for ETM generation from a block at any stage
+
+L-2016.03 Updates
+=================
+############################################################
+RM structure change
+############################################################
+Starting with this release, the IC Compiler(TM) II Top-Level Closure Reference
+Methodology is renamed to the IC Compiler(TM) II Hierarchical Place and Route
+Reference Methodology. Please check Release_Notes.ICC2-FLAT-RM.txt for more 
+details on the related changes to the RM structure.
+
+############################################################
+Updates for designs using abstracts
+############################################################
+* Starting with the release, Hierarchical P&R Reference Methodology supports
+  designs with multiple levels of physical hierarchy
+
+  A new variable named PHYSICAL_HIERARCHY_LEVEL is added to ./rm_setup/icc2_common_setup.tcl. 
+  Indicate the current level of implementation by setting this variable to top, intermediate, or bottom
+
+  When PHYSICAL_HIERARCHY_LEVEL = intermediate, the following application
+  option is set to enable the creation of nested abstracts
+     set_app_options -name abstract.allow_all_level_abstract -value true
+
+* The abstract creation step is now performed at the end of each implementation
+  step. This enables abstracts for all the sub-blocks in parallel
+
+* Starting with this release, you can specify the abstract to be used for
+  different implementation steps by using the BLOCK_ABSTRACT_FOR_* variables in
+  rm_setup/icc2_pnr_setup.tcl
+
+  By default, all these are initialized such that the abstracts created in the
+  chip_finish step of the lower level are used to implement the current level. 
+  You can replace the CHIP_FINISH_BLOCK_NAME variable with any other value based 
+  on your requirement.
+
+############################################################
+Updates for designs using extracted timing models (ETMs)
+############################################################
+* Swapping from abstracts to extracted timing models previously performed during
+  the init_top_design step is now removed. To use extracted timing models for some
+  of the sub-blocks, include the ETM reference libraries (NDMs) in the reference
+  library list
+
+* output_for_etm is now provided as an optional utility in Makefile_pnr. Use
+  it to generate the data needed to create an ETM in the PrimeTime tool
+
+############################################################
+Updates to application options 
+############################################################
+* The following application option is now on-by-default and therefore is removed
+	time.virtual_route_top_level 
+
+* The following application options is now moved to settings.step.place_opt.tcl
+	place_opt.initial_drc.global_route_based
+
+############################################################
+Miscellaneous Updates
+############################################################
+* The check_design command now performs all the checks performed by the 
+  check_hier_design command. So the check_hier_design command has been
+  removed from the reference methodology
+
+
+
+K-2015.06-SP4 Updates
+=====================
+############################################################
+Updates for clock_opt_cts.tcl
+############################################################
+* Removed looping over all scenarios while executing promote_constraints -cts
+
+############################################################
+Updates for report_qor.tcl
+############################################################
+* Added check_hier_design
+
+K-2015.06-SP2 Updates
+=====================
+############################################################
+Updates for common_settings_for_tlc.tcl
+############################################################
+* Added support for refine_opt, path_opt, layer optimization for top-level designs with abstracts.
+  i.e. removed the following lines 
+  
+  if {$USE_ABSTRACTS_FOR_BLOCKS != ""} {
+      set PLACE_OPT_REFINE_OPT                FALSE
+      set_app_options -name place_opt.flow.optimize_layers -value false ;# default false
+      set_app_options -name refine_opt.flow.optimize_layers -value false ;# default false
+  }
+
+############################################################
+Miscellaneous Updates
+############################################################
+* derive_hier_antenna_property command now supports labels. Update the lines
+  related to frame creation in the route_auto, route_opt, signoff_drc and
+  chip_finish scripts accordingly.
+
+
+K-2015.06 Updates
+=================
+############################################################
+Update summary
+############################################################
+
+Starting with version K-2015.06, the IC Compiler II Top-Level Closure
+Reference Methodology includes the following updates:
+
+* Added support for the QoR flow in addition to the TTR (default) flow
+
+* Combined the reference methodologies for abstracts and extracted timing
+  models (ETMs) into a single reference methodology.
+  All scripts related to top-level closure are in the rm_icc2_tlc_scripts
+  directory.
+
+* Removed the steps related to block implementation and added a recommendation
+  to use the IC Compiler II Flat Reference Methodology for block implementation.
+
+* Added the following new tasks:
+  - copy_design_libs
+    Copies the block and top-level design libraries.
+  - output_for_etm
+    Writes out the design data needed to generate ETMs.
+  - init_top_design
+    Replaces abstracts with ETMs for blocks that you want to represent
+    using ETMs during top-level closure
+
+* Added support for the following tasks, which were previously supported
+  only for flat designs:
+  - signoff_drc
+  - chip_finish
+
+Note that RM variables shared with the Flat RM are set in 
+rm_setup/icc2_flat_setup.tcl, while RM variables specific to the Top-Level
+Closure RM are set in rm_setup/icc2_tlc_setup.tcl.
+
+############################################################
+Updates for common_settings_for_tlc.tcl
+############################################################
+
+* Added the place.floorplan.density_aware_hard_movebounds application option
+  as a comment
+
+* Explicitly disabled the following features for top-level designs with
+  abstracts:
+  - PLACE_OPT_REFINE_OPT
+  - place_opt.initial_drc.global_route_based
+  - place_opt.flow.optimize_layers
+
+############################################################
+Updates for common_settings_for_all.tcl
+############################################################
+
+* Renamed PREROUTE_AREA_RECOVERY_EFFORT_HIGH to PREROUTE_AREA_RECOVERY_EFFORT
+  This variable controls the setting for the opt.area.effort application
+  option. You can now set this variable to low (the default), medium, high,
+  or ultra.
+
+* Renamed PREROUTE_BUFFER_AREA_EFFORT_HIGH to PREROUTE_BUFFER_AREA_EFFORT
+  This variable controls the setting for the opt.common.buffer_area_effort
+  application option. You can now set this variable to low (the default),
+  medium, high, or ultra.
+
+* Total power optimization, which is controlled by the new
+  PREROUTE_TOTAL_POWER_OPTIMIZATION variable
+  When total power optimization is enabled, the script performs enhanced
+  optimization to balance timing, area, leakage power, and dynamic power.
+  Setting this variable to TRUE sets the opt.power.mode application option
+  to total.
+
+############################################################
+Updates for placement and place_opt
+############################################################
+
+* Spacing labels and rules, which are controlled by the new
+  TCL_PLACEMENT_SPACING_LABEL_RULE_FILE variable
+
+  Use this variable to specify the placement spacing labels and rules,
+  such as set_placement_spacing_label and set_placement_spacing_rule.
+
+  Spacing labels and rules are not persistent and must be sourced in
+  each IC Compiler II session. When you set this variable, the specified
+  file is sourced in each stage of the top-level closure RM flow.
+
+* High-effort coarse placement, which is controlled by the
+  PLACE_OPT_INITIAL_PLACE_EFFORT_HIGH variable
+  Use this variable to enable high-effort coarse placement for regular
+  and two-pass place_opt. This variable specifies the setting for the
+  place_opt.initial_place.effort application option.
+
+############################################################
+Updates for route_auto and route_opt
+############################################################
+
+* Added support for route_auto and route_opt at the top level for designs
+  with abstracts
+
+############################################################
+Updates for create_abstract
+############################################################
+
+* Added the following application option settings:
+  - set_app_options -name abstract.include_aggressor_nets -value true
+    This setting is used to include signal integrity information during
+    create_abstract in the postroute steps
+
+############################################################
+Updates for reporting
+############################################################
+
+* Added analyze_design_violations to report_qor.tcl, which allows you to
+  analyze the violations in the design.
+  - Added the following command for the place_opt and clock_opt_opto stages:
+       analyze_design_violations -type setup -stage preroute
+  - Added the following command for the clock_opt_opto stage:
+       analyze_design_violations -type hold -stage preroute
+
+############################################################
+Updates derived from Flat Reference Methodology updates
+############################################################
+The updates described in the following sections of
+Release_Notes.ICC2-FLAT-RM.txt also apply to the top-level closure RM.
+
+* Updates for power
+* Updates for timing analysis
+* Updates for clock_opt
+* Miscellaneous updates
+
+J-2014.12-1 Incremental Updates (Mar 19)
+========================================
+
+############################################################
+Updates for common_settings_for_all.tcl
+############################################################
+
+This script is sourced at the beginning of place_opt.tcl; it covers
+settings that could impact multiple steps in the flow.
+
+* Added TCL_DONT_USE_FILE, which specifies the script file that contains 
+  library cell restriction commands such as "set_lib_cell_purpose -include 
+  none" and "set_lib_cell_purpose -exclude optimization".
+  The specified script file is sourced by common_settings_for_all.tcl.
+
+############################################################
+Updates for common_settings_for_advanced_node.tcl 
+############################################################
+
+* Changed the setting for the route.common.connect_within_pins_by_layer_name
+  application option from via_wire_standard_cell_pins to via_wire_all_pins.
+
+* Changed the setting for the route.common.net_min_layer_mode application
+  option from soft to allow_pin_connection.
+
+* Moved the sourcing of common_settings_for_advanced_node.tcl, if
+  ADVANCED_NODE is set to TRUE, from route_auto.tcl to place_opt.tcl.
+
+############################################################
+Updates for route_auto.tcl and top_route_auto.tcl 
+############################################################
+
+* Added the ROUTE_AUTO_CREATE_SHIELDS variable to icc2_flat_setup.tcl 
+  to control shield creation in route_auto.tcl.
+
+  This variable has the following settings:
+  - after_route_auto (default)
+    Use this setting to create shields after route_auto.
+  - before_route_auto
+    Use this setting to create shields before route_auto.
+
+############################################################
+Miscellaneous updates
+############################################################
+* Added the REPORT_QOR variable to icc2_flat_setup_for_tlc.tcl to control 
+  the QoR reporting task at the end of each step.
+  The default is TRUE; set it to FALSE to disable reporting.
+
+* Moved the report_app_options -non_default command
+  In the previous release, the script runs the "report_app_options 
+  -non_default" command run after sourcing the common settings script 
+  for each step.
+
+  Because the purpose of this command is to print out all RM and user-specified
+  application options, it has been moved to after sourcing the user-specified
+  preprocessing script. For example, in place_opt.tcl, the "report_app_options
+  -non_default" command was previously run before sourcing
+  TCL_USER_PLACE_OPT_PRE_SCRIPT. Now it is run afterwards, so that it also
+  captures the user-specified settings.
+
+* Added the following variables to icc2_flat_setup.tcl to allow you to 
+  source customized post-processing scripts in each corresponding step. 
+  - TCL_USER_PLACE_OPT_POST_SCRIPT
+    Use this variable to specify a customized post-processing script to
+    run after place_opt.tcl and top_place_opt.tcl.
+
+  - TCL_USER_CLOCK_OPT_CTS_POST_SCRIPT
+    Use this variable to specify a customized post-processing script to
+    run after clock_opt_cts.tcl and top_clock_opt_cts.tcl.
+
+  - TCL_USER_CLOCK_OPT_OPTO_POST_SCRIPT
+    Use this variable to specify a customized post-processing script to
+    run after clock_opt_opto.tcl and top_clock_opt_opto.tcl.
+
+  - TCL_USER_ROUTE_AUTO_POST_SCRIPT
+    Use this variable to specify a customized post-processing script to
+    run after route_auto.tcl and top_route_auto.tcl.
+
+  - TCL_USER_ROUTE_OPT_POST_SCRIPT
+    Use this variable to specify a customized post-processing script to
+    run after route_opt.tcl and top_route_opt.tcl.
+
+
+J-2014.12-1 (Jan 23)
+====================
+
+This is the first release of the IC Compiler II Top-Level Closure Reference 
+Methodology.
+
+############################################################
+General updates
+############################################################
+
+* The J-2014.12-1 release supports two flows, which are included in
+  separate tar files:
+  - Default flow (J-2014.12-1_ICC2_RM_default.tar)
+    The flat RM scripts included in this tar file are for default baseline
+    flow.
+
+  - QoR flow (J-2014.12-1_ICC2_RM_qor.tar)
+    The flat RM scripts included in this tar file include concurrent clock
+    and data (CCD) optimization and are targeted at high performance at a
+    cost of runtime.
+
+  For more information about these flow, see Release_Notes.ICC2-FLAT-RM.txt.

@@ -1,0 +1,124 @@
+##########################################################################################
+# Tool: IC Compiler II
+# Script: Makefile_pnr
+# Version: O-2018.06-SP2 (October 8, 2018)
+# Copyright (C) 2014-2018 Synopsys, Inc. All rights reserved.
+##########################################################################################
+
+ICC2_EXEC = icc2_shell
+FM_EXEC = fm_shell
+VC_LP_EXEC = vc_static_shell
+LOGS_DIR = logs_icc2
+OPTIONS =
+
+## Optional: Specify design library if you want backup step and clean step to use it
+## CAUTION: if added, the clean step will delete it
+DESIGN_LIB =
+
+console:
+	$(ICC2_EXEC)
+
+setup:
+	test -d $(LOGS_DIR)	|| mkdir $(LOGS_DIR)
+	date > setup
+
+init_design: setup
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/init_design.tcl | tee -i $(LOGS_DIR)/init_design.log
+
+place_opt: setup init_design
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/place_opt.tcl | tee -i $(LOGS_DIR)/place_opt.log
+
+clock_opt_cts: setup place_opt
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/clock_opt_cts.tcl | tee -i $(LOGS_DIR)/clock_opt_cts.log
+
+clock_opt_opto: setup clock_opt_cts
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/clock_opt_opto.tcl | tee -i $(LOGS_DIR)/clock_opt_opto.log
+
+route_auto: setup clock_opt_opto
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/route_auto.tcl | tee -i $(LOGS_DIR)/route_auto.log
+
+route_opt: setup route_auto
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/route_opt.tcl | tee -i $(LOGS_DIR)/route_opt.log
+
+chip_finish: setup route_opt
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/chip_finish.tcl | tee -i $(LOGS_DIR)/chip_finish.log
+
+icv_in_design: setup chip_finish
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/icv_in_design.tcl | tee -i $(LOGS_DIR)/icv_in_design.log
+
+all: icv_in_design
+	date > all
+
+# Remember to also set WRITE_DATA_FROM_BLOCK_NAME to your desired step as input; default is icv_in_design
+write_data: setup 
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/write_data.tcl | tee -i $(LOGS_DIR)/write_data.log
+
+################################################################################################################
+## Optional for Flat P&R (DESIGN_STYLE set to flat in icc2_common_setup.tcl)
+################################################################################################################
+# For Redhawk in-design analysis
+# Specify the starting block using the REDHAWK_IN_DESIGN_PNR_FROM_BLOCK_NAME variable in icc2_pnr_setup.tcl
+redhawk_in_design_pnr: setup
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/redhawk_in_design_pnr.tcl | tee -i $(LOGS_DIR)/redhawk_in_design_pnr.log
+
+# For ECO fusion
+# Specify the starting block using the ECO_OPT_FROM_BLOCK_NAME variable in icc2_pnr_setup.tcl
+eco_opt: setup
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/eco_opt.tcl | tee -i $(LOGS_DIR)/eco_opt.log
+
+# For classic PT-ECO flow
+# Specify the starting block using the PT_ECO_FROM_BLOCK_NAME variable in icc2_pnr_setup.tcl
+pt_eco: setup
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/pt_eco.tcl | tee -i $(LOGS_DIR)/pt_eco.log
+
+# For Galaxy incremental ECO flow (two steps)
+# Specify the starting block using the PT_ECO_INCREMENTAL_FROM_BLOCK_NAME variable in icc2_pnr_setup.tcl
+pt_eco_incremental_1: setup
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/pt_eco_incremental_1.tcl | tee -i $(LOGS_DIR)/pt_eco_incremental_1.log
+	# After the above is done in ICC-II, follow the in-script guidance to proceed to StarRC for extraction and PrimeTime for ECO.
+
+pt_eco_incremental_2: setup pt_eco_incremental_1
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/pt_eco_incremental_2.tcl | tee -i $(LOGS_DIR)/pt_eco_incremental_2.log
+	# After the above is done in ICC-II, follow the in-script guidance to proceed to StarRC for extraction and PrimeTime
+	# to assess timing and determine if further ECO iteration is required.
+
+# For formality
+fm: setup write_data
+	$(FM_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/fm.tcl | tee -i $(LOGS_DIR)/fm.log
+
+# For Verification Compiler Low Power Static Signoff (VC LP)
+vc_lp: setup write_data
+	$(VC_LP_EXEC) -f ./rm_icc2_pnr_scripts/vc_lp.tcl | tee -i $(LOGS_DIR)/vc_lp.log
+
+################################################################################################################
+## Optional for Hierarchical P&R (DESIGN_STYLE set to hier in icc2_common_setup.tcl)
+################################################################################################################
+# For bottom and intermediate levels of hierarchical designs (PHYSICAL_HIERARCHY_LEVEL set to bottom or intermediate)
+export: setup
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/export.tcl | tee -i $(LOGS_DIR)/export.log
+
+write_data_for_etm: setup
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/write_data_for_etm.tcl | tee -i $(LOGS_DIR)/write_data_for_etm.log
+
+################################################################################################################
+# Utilities
+################################################################################################################
+# Generates a summary report and csv file after any stage of the flow. 
+# Running it multiple times will overwrite previous reports with the new report.
+summary: setup
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_pnr_scripts/summary.tcl | tee -i $(LOGS_DIR)/summary.log
+
+##Backup
+BACKUP  = BACKUP.`date "+%m_%d_%H_%M"`
+backup:
+	rm -rf $(BACKUP)
+	mkdir -p $(BACKUP)
+	cp -rf $(DESIGN_LIB) $(LOGS_DIR) $(BACKUP)
+
+##Clean
+clean:
+	rm  -f setup init_design place_opt clock_opt_cts clock_opt_opto route_auto route_opt chip_finish icv_in_design write_data all redhawk_in_design_pnr eco_opt pt_eco pt_eco_incremental_1 pt_eco_incremental_2 fm vc_lp summary
+
+clean_all: clean
+	rm -rf $(LOGS_DIR) $(DESIGN_LIB)
+

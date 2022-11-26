@@ -1,0 +1,17 @@
+##########################################################################################
+# Tool: IC Compiler II
+# Script: route_opt.starrc_config_example.txt
+# Purpose: This is an example of configuration for StarRC in-design sourced by route_opt.tcl
+# Version: O-2018.06-SP2 (October 8, 2018)
+# Copyright (C) 2014-2018 Synopsys, Inc. All rights reserved.
+##########################################################################################
+
+## The following are required setup
+SIGNOFF_IMAGE: your_StarXtract_path
+MAPPING_FILE: your_starrc_mapping_file
+CORNER_GRD_FILE: your_corner_grd_mapping_file
+
+	## CORNER_GRD_FILE example
+	#  Corner1 nxtgrd_file1_absolute_path
+	#  Corner2 nxtgrd_file2_absolute_path
+
