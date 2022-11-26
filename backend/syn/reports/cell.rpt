@@ -1,0 +1,22 @@
+ 
+****************************************
+Report : cell
+Design : CHIP_TOP
+Version: O-2018.06-SP1
+Date   : Sat Nov 26 03:48:06 2022
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+u_riscv_core              riscv_core_0                    930051.340109
+                                                                    b, h, n
+--------------------------------------------------------------------------------
+Total 1 cells                                             930051.340109
+1

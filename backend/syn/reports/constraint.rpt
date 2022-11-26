@@ -1,0 +1,2495 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : CHIP_TOP
+Version: O-2018.06-SP1
+Date   : Sat Nov 26 03:48:05 2022
+****************************************
+
+
+  Startpoint: u_riscv_core/u_ex_mem/mem2reg_sel_line_out_reg
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/mem2reg_sel_line_out_reg
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/mem2reg_sel_line_out_reg/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/mem2reg_sel_line_out_reg/Q (DFFRQX2)
+                                                          0.31       1.81 f
+  u_riscv_core/u_mem_wb/mem2reg_sel_line_out_reg/D (DFFRQX2)
+                                                          0.00       1.81 f
+  data arrival time                                                  1.81
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/mem2reg_sel_line_out_reg/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.81
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.06
+
+
+  Startpoint: u_riscv_core/u_id_ex/mem_rd_line_out_reg
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/mem_rd_line_out_reg
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_id_ex/mem_rd_line_out_reg/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_id_ex/mem_rd_line_out_reg/Q (DFFRQX2)
+                                                          0.31       1.81 f
+  u_riscv_core/u_ex_mem/mem_rd_line_out_reg/D (DFFRQX2)
+                                                          0.00       1.81 f
+  data arrival time                                                  1.81
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/mem_rd_line_out_reg/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.81
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.06
+
+
+  Startpoint: u_riscv_core/u_id_ex/mem_op_line_out_reg[2]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/mem_op_line_out_reg[2]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_id_ex/mem_op_line_out_reg[2]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_id_ex/mem_op_line_out_reg[2]/Q (DFFRQX2)
+                                                          0.31       1.81 f
+  u_riscv_core/u_ex_mem/mem_op_line_out_reg[2]/D (DFFRQX2)
+                                                          0.00       1.81 f
+  data arrival time                                                  1.81
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/mem_op_line_out_reg[2]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.81
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.06
+
+
+  Startpoint: u_riscv_core/u_id_ex/mem_op_line_out_reg[1]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/mem_op_line_out_reg[1]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_id_ex/mem_op_line_out_reg[1]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_id_ex/mem_op_line_out_reg[1]/Q (DFFRQX2)
+                                                          0.31       1.81 f
+  u_riscv_core/u_ex_mem/mem_op_line_out_reg[1]/D (DFFRQX2)
+                                                          0.00       1.81 f
+  data arrival time                                                  1.81
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/mem_op_line_out_reg[1]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.81
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.06
+
+
+  Startpoint: u_riscv_core/u_id_ex/mem_wr_line_out_reg
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/mem_wr_line_out_reg
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_id_ex/mem_wr_line_out_reg/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_id_ex/mem_wr_line_out_reg/Q (DFFRQX2)
+                                                          0.31       1.81 f
+  u_riscv_core/u_ex_mem/mem_wr_line_out_reg/D (DFFRQX2)
+                                                          0.00       1.81 f
+  data arrival time                                                  1.81
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/mem_wr_line_out_reg/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.81
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.06
+
+
+  Startpoint: u_riscv_core/u_id_ex/mem_op_line_out_reg[0]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/mem_op_line_out_reg[0]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_id_ex/mem_op_line_out_reg[0]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_id_ex/mem_op_line_out_reg[0]/Q (DFFRQX2)
+                                                          0.31       1.81 f
+  u_riscv_core/u_ex_mem/mem_op_line_out_reg[0]/D (DFFRQX2)
+                                                          0.00       1.81 f
+  data arrival time                                                  1.81
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/mem_op_line_out_reg[0]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.81
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.06
+
+
+  Startpoint: u_riscv_core/u_id_ex/reg_wb_addr_line_out_reg[2]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[2]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_id_ex/reg_wb_addr_line_out_reg[2]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_id_ex/reg_wb_addr_line_out_reg[2]/Q (DFFRQX2)
+                                                          0.31       1.81 f
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[2]/D (DFFRQX2)
+                                                          0.00       1.81 f
+  data arrival time                                                  1.81
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[2]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.81
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.06
+
+
+  Startpoint: u_riscv_core/u_id_ex/reg_wr_line_out_reg
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg_wr_line_out_reg
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_id_ex/reg_wr_line_out_reg/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_id_ex/reg_wr_line_out_reg/Q (DFFRQX2)
+                                                          0.31       1.81 f
+  u_riscv_core/u_ex_mem/reg_wr_line_out_reg/D (DFFRQX2)
+                                                          0.00       1.81 f
+  data arrival time                                                  1.81
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg_wr_line_out_reg/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.81
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.06
+
+
+  Startpoint: u_riscv_core/u_id_ex/reg_wb_addr_line_out_reg[0]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[0]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_id_ex/reg_wb_addr_line_out_reg[0]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_id_ex/reg_wb_addr_line_out_reg[0]/Q (DFFRQX2)
+                                                          0.31       1.81 f
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[0]/D (DFFRQX2)
+                                                          0.00       1.81 f
+  data arrival time                                                  1.81
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[0]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.81
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.06
+
+
+  Startpoint: u_riscv_core/u_id_ex/reg_wb_addr_line_out_reg[1]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[1]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_id_ex/reg_wb_addr_line_out_reg[1]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_id_ex/reg_wb_addr_line_out_reg[1]/Q (DFFRQX2)
+                                                          0.31       1.81 f
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[1]/D (DFFRQX2)
+                                                          0.00       1.81 f
+  data arrival time                                                  1.81
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[1]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.81
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.06
+
+
+  Startpoint: u_riscv_core/u_id_ex/reg_wb_addr_line_out_reg[4]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[4]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_id_ex/reg_wb_addr_line_out_reg[4]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_id_ex/reg_wb_addr_line_out_reg[4]/Q (DFFRQX2)
+                                                          0.31       1.81 f
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[4]/D (DFFRQX2)
+                                                          0.00       1.81 f
+  data arrival time                                                  1.81
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[4]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.81
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.06
+
+
+  Startpoint: u_riscv_core/u_id_ex/reg_wb_addr_line_out_reg[3]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[3]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_id_ex/reg_wb_addr_line_out_reg[3]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_id_ex/reg_wb_addr_line_out_reg[3]/Q (DFFRQX2)
+                                                          0.31       1.81 f
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[3]/D (DFFRQX2)
+                                                          0.00       1.81 f
+  data arrival time                                                  1.81
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[3]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.81
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.06
+
+
+  Startpoint: u_riscv_core/u_id_ex/mem2reg_sel_line_out_reg
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/mem2reg_sel_line_out_reg
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_id_ex/mem2reg_sel_line_out_reg/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_id_ex/mem2reg_sel_line_out_reg/Q (DFFRQX2)
+                                                          0.31       1.81 f
+  u_riscv_core/u_ex_mem/mem2reg_sel_line_out_reg/D (DFFRQX2)
+                                                          0.00       1.81 f
+  data arrival time                                                  1.81
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/mem2reg_sel_line_out_reg/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.81
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.06
+
+
+  Startpoint: u_riscv_core/u_ex_mem/reg_wr_line_out_reg
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/reg_wr_line_out_reg
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/reg_wr_line_out_reg/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/reg_wr_line_out_reg/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_mem_wb/reg_wr_line_out_reg/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/reg_wr_line_out_reg/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[21]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[21]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[21]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[21]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[21]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[21]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[20]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[20]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[20]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[20]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[20]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[20]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[15]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[15]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[15]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[15]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[15]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[15]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[14]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[14]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[14]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[14]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[14]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[14]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[12]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[12]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[12]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[12]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[12]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[12]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[6]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[6]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[6]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[6]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[6]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[6]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[31]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[31]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[31]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[31]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[31]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[31]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[17]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[17]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[17]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[17]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[17]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[17]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[9]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[9]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[9]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[9]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[9]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[9]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[29]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[29]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[29]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[29]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[29]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[29]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[28]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[28]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[28]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[28]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[28]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[28]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[23]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[23]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[23]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[23]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[23]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[23]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[22]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[22]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[22]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[22]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[22]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[22]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[5]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[5]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[5]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[5]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[5]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[5]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[4]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[4]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[4]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[4]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[4]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[4]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[0]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[0]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[0]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[0]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[0]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[0]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[1]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[1]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[1]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[1]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[1]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[1]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[24]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[24]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[24]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[24]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[24]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[24]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[18]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[18]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[18]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[18]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[18]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[18]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[8]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[8]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[8]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[8]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[8]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[8]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[0]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/reg_wb_addr_line_out_reg[0]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[0]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[0]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_mem_wb/reg_wb_addr_line_out_reg[0]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/reg_wb_addr_line_out_reg[0]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[1]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/reg_wb_addr_line_out_reg[1]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[1]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[1]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_mem_wb/reg_wb_addr_line_out_reg[1]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/reg_wb_addr_line_out_reg[1]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[25]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[25]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[25]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[25]/Q (DFFRQX2)
+                                                          0.33       1.83 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[25]/D (DFFRQX2)
+                                                          0.00       1.83 f
+  data arrival time                                                  1.83
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[25]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.83
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[27]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[27]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[27]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[27]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[27]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[27]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[26]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[26]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[26]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[26]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[26]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[26]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[19]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[19]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[19]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[19]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[19]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[19]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[16]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[16]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[16]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[16]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[16]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[16]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[13]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[13]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[13]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[13]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[13]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[13]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[11]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[11]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[11]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[11]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[11]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[11]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[10]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[10]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[10]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[10]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[10]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[10]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[7]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[7]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[7]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[7]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[7]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[7]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[3]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[3]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[3]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[3]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[3]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[3]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[2]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[2]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[2]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[2]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[2]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[2]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[3]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/reg_wb_addr_line_out_reg[3]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[3]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[3]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/reg_wb_addr_line_out_reg[3]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/reg_wb_addr_line_out_reg[3]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[4]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/reg_wb_addr_line_out_reg[4]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[4]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[4]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/reg_wb_addr_line_out_reg[4]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/reg_wb_addr_line_out_reg[4]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[2]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/reg_wb_addr_line_out_reg[2]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[2]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/reg_wb_addr_line_out_reg[2]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/reg_wb_addr_line_out_reg[2]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/reg_wb_addr_line_out_reg[2]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/mem_op_line_out_reg[1]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_wrap_dram/mem_op_r_reg[1]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/mem_op_line_out_reg[1]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/mem_op_line_out_reg[1]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_wrap_dram/mem_op_r_reg[1]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_wrap_dram/mem_op_r_reg[1]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[28]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[28]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[28]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[28]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[28]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[28]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[24]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[24]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[24]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[24]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[24]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[24]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[29]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[29]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[29]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[29]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[29]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[29]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[25]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[25]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[25]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[25]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[25]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[25]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[14]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[14]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[14]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[14]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[14]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[14]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[26]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[26]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[26]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[26]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[26]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[26]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[15]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[15]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[15]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[15]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[15]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[15]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_regfile/rs_reg2_rdata_reg[30]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_ex_mem/reg2_data_line_out_reg[30]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[30]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_regfile/rs_reg2_rdata_reg[30]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[30]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_ex_mem/reg2_data_line_out_reg[30]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[27]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[27]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[27]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[27]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[27]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[27]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[31]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[31]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[31]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[31]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[31]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[31]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[20]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[20]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[20]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[20]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[20]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[20]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[17]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[17]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[17]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[17]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[17]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[17]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[21]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[21]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[21]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[21]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[21]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[21]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[18]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[18]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[18]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[18]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[18]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[18]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[22]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[22]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[22]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[22]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[22]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[22]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[19]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[19]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[19]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[19]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[19]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[19]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[30]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[30]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[30]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[30]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[30]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[30]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[23]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[23]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[23]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[23]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[23]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[23]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[16]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[16]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[16]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[16]/Q (DFFRQX2)
+                                                          0.34       1.84 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[16]/D (DFFRQX2)
+                                                          0.00       1.84 f
+  data arrival time                                                  1.84
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[16]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+  Startpoint: u_riscv_core/u_ex_mem/mem_op_line_out_reg[0]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_wrap_dram/mem_op_r_reg[0]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/mem_op_line_out_reg[0]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/mem_op_line_out_reg[0]/Q (DFFRQX2)
+                                                          0.35       1.85 f
+  u_riscv_core/u_wrap_dram/mem_op_r_reg[0]/D (DFFRQX2)
+                                                          0.00       1.85 f
+  data arrival time                                                  1.85
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_wrap_dram/mem_op_r_reg[0]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.85
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.02
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[0]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_wrap_dram/addr_low2_r_reg[0]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[0]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[0]/Q (DFFRQX2)
+                                                          0.36       1.86 f
+  u_riscv_core/u_wrap_dram/addr_low2_r_reg[0]/D (DFFRQX2)
+                                                          0.00       1.86 f
+  data arrival time                                                  1.86
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_wrap_dram/addr_low2_r_reg[0]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.86
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[0]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[0]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[0]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[0]/Q (DFFRQX2)
+                                                          0.36       1.86 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[0]/D (DFFRQX2)
+                                                          0.00       1.86 f
+  data arrival time                                                  1.86
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[0]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.86
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[1]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_wrap_dram/addr_low2_r_reg[1]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[1]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[1]/Q (DFFRQX2)
+                                                          0.37       1.87 f
+  u_riscv_core/u_wrap_dram/addr_low2_r_reg[1]/D (DFFRQX2)
+                                                          0.00       1.87 f
+  data arrival time                                                  1.87
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_wrap_dram/addr_low2_r_reg[1]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.87
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase significant digits)                      0.00
+
+
+  Startpoint: u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[1]
+              (rising edge-triggered flip-flop clocked by sys_clk)
+  Endpoint: u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[1]
+            (rising edge-triggered flip-flop clocked by sys_clk)
+  Path Group: sys_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[1]/CK (DFFRQX2)
+                                                          0.00 #     1.50 r
+  u_riscv_core/u_ex_mem/alu_ex_result_line_out_reg[1]/Q (DFFRQX2)
+                                                          0.37       1.87 f
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[1]/D (DFFRQX2)
+                                                          0.00       1.87 f
+  data arrival time                                                  1.87
+
+  clock sys_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  clock uncertainty                                       0.30       1.80
+  u_riscv_core/u_mem_wb/alu_ex_result_line_out_reg[1]/CK (DFFRQX2)
+                                                          0.00       1.80 r
+  library hold time                                       0.07       1.87
+  data required time                                                 1.87
+  --------------------------------------------------------------------------
+  data required time                                                 1.87
+  data arrival time                                                 -1.87
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase significant digits)                      0.00
+
+
+    Design: CHIP_TOP
+
+    max_area               0.00
+  - Current Area       930051.31
+  ------------------------------
+    Slack              -930051.31  (VIOLATED)
+
+
+1

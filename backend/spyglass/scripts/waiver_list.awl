@@ -1,0 +1,7 @@
+waive -du {  {SRAM_4096_32}  }  -rule {  {ALL}  }  -exact -comment {Created by ICer on 08-9-2022 19:56:37} 
+waive -du {  {wrap_dram}  }  -msg {Detected undriven input terminal CHIP_TOP.u_riscv_core.u_wrap_dram.u_ram_data.EMAB[2:0]}  -rule {  {UndrivenInTerm-ML}  }  -comment {Created by ICer on 08-9-2022 19:58:18}  -exact 
+waive -du {  {wrap_dram}  }  -msg {Detected undriven input terminal CHIP_TOP.u_riscv_core.u_wrap_dram.u_ram_data.DB[31:0]}  -rule {  {UndrivenInTerm-ML}  }  -comment {Created by ICer on 08-9-2022 19:58:27}  -exact 
+waive -du {  {wrap_dram}  }  -msg {Detected undriven input terminal CHIP_TOP.u_riscv_core.u_wrap_dram.u_ram_data.EMAA[2:0]}  -rule {  {UndrivenInTerm-ML}  }  -comment {Created by ICer on 08-9-2022 19:58:37}  -exact 
+waive -du {  {wrap_iram}  }  -msg {Detected undriven input terminal CHIP_TOP.u_riscv_core.u_wrap_iram.u_ram_data.EMAB[2:0]}  -rule {  {UndrivenInTerm-ML}  }  -comment {Created by ICer on 08-9-2022 19:58:44}  -exact 
+waive -du {  {wrap_iram}  }  -msg {Detected undriven input terminal CHIP_TOP.u_riscv_core.u_wrap_iram.u_ram_data.EMAA[2:0]}  -rule {  {UndrivenInTerm-ML}  }  -comment {Created by ICer on 08-9-2022 19:58:50}  -exact 
+waive -du {  {wrap_iram}  }  -msg {Detected undriven input terminal CHIP_TOP.u_riscv_core.u_wrap_iram.u_ram_data.DB[31:0]}  -rule {  {UndrivenInTerm-ML}  }  -comment {Created by ICer on 08-9-2022 19:59:00}  -exact 

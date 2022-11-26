@@ -1,0 +1,3 @@
+riscv_core  :   rtl_v00
+wrap        :   rtl_v00
+chip        :   rtl_v00

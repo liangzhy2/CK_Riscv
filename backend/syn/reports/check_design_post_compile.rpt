@@ -1,0 +1,600 @@
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06-SP1
+Date:        Sat Nov 26 03:48:06 2022
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                    244
+    Unconnected ports (LINT-28)                                   111
+    Feedthrough (LINT-29)                                         128
+    Shorted outputs (LINT-31)                                       5
+
+Cells                                                             168
+    Connected to power or ground (LINT-32)                        162
+    Nets connected to multiple pins on same cell (LINT-33)          6
+--------------------------------------------------------------------------------
+
+Warning: In design 'wrap_iram_0', port 'addr[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'addr[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_iram_0', port 'wdata[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0', port 'instruct_data_in[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'wrap_dram_0', port 'addr[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_add_1_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_add_1_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0_DW01_cmp6_0', port 'TC' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0_DW01_cmp6_0', port 'LE' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard_detec_0_DW01_cmp6_0', port 'GE' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_add_0_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_add_0_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_ex_0_DW_cmp_0', port 'TC' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_ex_0_DW_cmp_0', port 'GE_LT' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_ex_0_DW_cmp_0', port 'GE_GT_EQ' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_ex_0_DW_cmp_0', port 'EQ_NE' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_ex_0_DW_cmp_1', port 'TC' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_ex_0_DW_cmp_1', port 'GE_LT' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_ex_0_DW_cmp_1', port 'GE_GT_EQ' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_ex_0_DW_cmp_1', port 'EQ_NE' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_ex_0_DW01_sub_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_ex_0_DW01_sub_0', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_ex_0_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_ex_0_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[31]' is connected directly to output port 'instruct_data_line_out[31]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[30]' is connected directly to output port 'instruct_data_line_out[30]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[29]' is connected directly to output port 'instruct_data_line_out[29]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[28]' is connected directly to output port 'instruct_data_line_out[28]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[27]' is connected directly to output port 'instruct_data_line_out[27]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[26]' is connected directly to output port 'instruct_data_line_out[26]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[25]' is connected directly to output port 'instruct_data_line_out[25]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[24]' is connected directly to output port 'instruct_data_line_out[24]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[23]' is connected directly to output port 'instruct_data_line_out[23]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[22]' is connected directly to output port 'instruct_data_line_out[22]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[21]' is connected directly to output port 'instruct_data_line_out[21]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[20]' is connected directly to output port 'instruct_data_line_out[20]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[19]' is connected directly to output port 'instruct_data_line_out[19]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[18]' is connected directly to output port 'instruct_data_line_out[18]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[17]' is connected directly to output port 'instruct_data_line_out[17]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[16]' is connected directly to output port 'instruct_data_line_out[16]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[15]' is connected directly to output port 'instruct_data_line_out[15]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[14]' is connected directly to output port 'instruct_data_line_out[14]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[13]' is connected directly to output port 'instruct_data_line_out[13]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[12]' is connected directly to output port 'instruct_data_line_out[12]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[11]' is connected directly to output port 'instruct_data_line_out[11]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[10]' is connected directly to output port 'instruct_data_line_out[10]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[9]' is connected directly to output port 'instruct_data_line_out[9]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[8]' is connected directly to output port 'instruct_data_line_out[8]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[7]' is connected directly to output port 'instruct_data_line_out[7]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[6]' is connected directly to output port 'instruct_data_line_out[6]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[5]' is connected directly to output port 'instruct_data_line_out[5]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[4]' is connected directly to output port 'instruct_data_line_out[4]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[3]' is connected directly to output port 'instruct_data_line_out[3]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[2]' is connected directly to output port 'instruct_data_line_out[2]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[1]' is connected directly to output port 'instruct_data_line_out[1]'. (LINT-29)
+Warning: In design 'if_id_0', input port 'instruct_data_line_in[0]' is connected directly to output port 'instruct_data_line_out[0]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[31]' is connected directly to output port 'reg1_data_line_out[31]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[30]' is connected directly to output port 'reg1_data_line_out[30]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[29]' is connected directly to output port 'reg1_data_line_out[29]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[28]' is connected directly to output port 'reg1_data_line_out[28]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[27]' is connected directly to output port 'reg1_data_line_out[27]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[26]' is connected directly to output port 'reg1_data_line_out[26]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[25]' is connected directly to output port 'reg1_data_line_out[25]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[24]' is connected directly to output port 'reg1_data_line_out[24]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[23]' is connected directly to output port 'reg1_data_line_out[23]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[22]' is connected directly to output port 'reg1_data_line_out[22]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[21]' is connected directly to output port 'reg1_data_line_out[21]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[20]' is connected directly to output port 'reg1_data_line_out[20]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[19]' is connected directly to output port 'reg1_data_line_out[19]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[18]' is connected directly to output port 'reg1_data_line_out[18]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[17]' is connected directly to output port 'reg1_data_line_out[17]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[16]' is connected directly to output port 'reg1_data_line_out[16]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[15]' is connected directly to output port 'reg1_data_line_out[15]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[14]' is connected directly to output port 'reg1_data_line_out[14]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[13]' is connected directly to output port 'reg1_data_line_out[13]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[12]' is connected directly to output port 'reg1_data_line_out[12]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[11]' is connected directly to output port 'reg1_data_line_out[11]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[10]' is connected directly to output port 'reg1_data_line_out[10]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[9]' is connected directly to output port 'reg1_data_line_out[9]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[8]' is connected directly to output port 'reg1_data_line_out[8]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[7]' is connected directly to output port 'reg1_data_line_out[7]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[6]' is connected directly to output port 'reg1_data_line_out[6]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[5]' is connected directly to output port 'reg1_data_line_out[5]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[4]' is connected directly to output port 'reg1_data_line_out[4]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[3]' is connected directly to output port 'reg1_data_line_out[3]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[2]' is connected directly to output port 'reg1_data_line_out[2]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[1]' is connected directly to output port 'reg1_data_line_out[1]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg1_data_line_in[0]' is connected directly to output port 'reg1_data_line_out[0]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[31]' is connected directly to output port 'reg2_data_line_out[31]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[30]' is connected directly to output port 'reg2_data_line_out[30]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[29]' is connected directly to output port 'reg2_data_line_out[29]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[28]' is connected directly to output port 'reg2_data_line_out[28]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[27]' is connected directly to output port 'reg2_data_line_out[27]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[26]' is connected directly to output port 'reg2_data_line_out[26]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[25]' is connected directly to output port 'reg2_data_line_out[25]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[24]' is connected directly to output port 'reg2_data_line_out[24]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[23]' is connected directly to output port 'reg2_data_line_out[23]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[22]' is connected directly to output port 'reg2_data_line_out[22]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[21]' is connected directly to output port 'reg2_data_line_out[21]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[20]' is connected directly to output port 'reg2_data_line_out[20]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[19]' is connected directly to output port 'reg2_data_line_out[19]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[18]' is connected directly to output port 'reg2_data_line_out[18]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[17]' is connected directly to output port 'reg2_data_line_out[17]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[16]' is connected directly to output port 'reg2_data_line_out[16]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[15]' is connected directly to output port 'reg2_data_line_out[15]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[14]' is connected directly to output port 'reg2_data_line_out[14]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[13]' is connected directly to output port 'reg2_data_line_out[13]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[12]' is connected directly to output port 'reg2_data_line_out[12]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[11]' is connected directly to output port 'reg2_data_line_out[11]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[10]' is connected directly to output port 'reg2_data_line_out[10]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[9]' is connected directly to output port 'reg2_data_line_out[9]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[8]' is connected directly to output port 'reg2_data_line_out[8]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[7]' is connected directly to output port 'reg2_data_line_out[7]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[6]' is connected directly to output port 'reg2_data_line_out[6]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[5]' is connected directly to output port 'reg2_data_line_out[5]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[4]' is connected directly to output port 'reg2_data_line_out[4]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[3]' is connected directly to output port 'reg2_data_line_out[3]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[2]' is connected directly to output port 'reg2_data_line_out[2]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[1]' is connected directly to output port 'reg2_data_line_out[1]'. (LINT-29)
+Warning: In design 'id_ex_0', input port 'reg2_data_line_in[0]' is connected directly to output port 'reg2_data_line_out[0]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[31]' is connected directly to output port 'ram_data_out_line_out[31]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[30]' is connected directly to output port 'ram_data_out_line_out[30]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[29]' is connected directly to output port 'ram_data_out_line_out[29]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[28]' is connected directly to output port 'ram_data_out_line_out[28]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[27]' is connected directly to output port 'ram_data_out_line_out[27]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[26]' is connected directly to output port 'ram_data_out_line_out[26]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[25]' is connected directly to output port 'ram_data_out_line_out[25]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[24]' is connected directly to output port 'ram_data_out_line_out[24]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[23]' is connected directly to output port 'ram_data_out_line_out[23]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[22]' is connected directly to output port 'ram_data_out_line_out[22]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[21]' is connected directly to output port 'ram_data_out_line_out[21]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[20]' is connected directly to output port 'ram_data_out_line_out[20]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[19]' is connected directly to output port 'ram_data_out_line_out[19]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[18]' is connected directly to output port 'ram_data_out_line_out[18]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[17]' is connected directly to output port 'ram_data_out_line_out[17]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[16]' is connected directly to output port 'ram_data_out_line_out[16]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[15]' is connected directly to output port 'ram_data_out_line_out[15]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[14]' is connected directly to output port 'ram_data_out_line_out[14]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[13]' is connected directly to output port 'ram_data_out_line_out[13]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[12]' is connected directly to output port 'ram_data_out_line_out[12]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[11]' is connected directly to output port 'ram_data_out_line_out[11]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[10]' is connected directly to output port 'ram_data_out_line_out[10]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[9]' is connected directly to output port 'ram_data_out_line_out[9]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[8]' is connected directly to output port 'ram_data_out_line_out[8]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[7]' is connected directly to output port 'ram_data_out_line_out[7]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[6]' is connected directly to output port 'ram_data_out_line_out[6]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[5]' is connected directly to output port 'ram_data_out_line_out[5]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[4]' is connected directly to output port 'ram_data_out_line_out[4]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[3]' is connected directly to output port 'ram_data_out_line_out[3]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[2]' is connected directly to output port 'ram_data_out_line_out[2]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[1]' is connected directly to output port 'ram_data_out_line_out[1]'. (LINT-29)
+Warning: In design 'mem_wb_0', input port 'ram_data_out_line_in[0]' is connected directly to output port 'ram_data_out_line_out[0]'. (LINT-29)
+Warning: In design 'hazard_detec_0', output port 'ctrl_mux_sel' is connected directly to output port 'pc_stop'. (LINT-31)
+Warning: In design 'hazard_detec_0', output port 'ctrl_mux_sel' is connected directly to output port 'pc_mux_sel'. (LINT-31)
+Warning: In design 'hazard_detec_0', output port 'ctrl_mux_sel' is connected directly to output port 'if_flush'. (LINT-31)
+Warning: In design 'main_ctrl_0', output port 'rd_addr_sel' is connected directly to output port 'reg_wr_imm'. (LINT-31)
+Warning: In design 'main_ctrl_0', output port 'mem2reg_sel' is connected directly to output port 'exAlu_op[1]'. (LINT-31)
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[31]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[30]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[29]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[28]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[27]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[26]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[25]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[24]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[23]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[22]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[21]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[20]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[19]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[18]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[17]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[16]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[15]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[14]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[13]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[12]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[11]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[10]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[9]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[8]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[7]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[6]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[5]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[4]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[3]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[2]' is connected to logic 1. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[1]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_alu_add_4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0[0]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'mem_wr' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[31]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[30]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[29]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[28]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[27]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[26]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[25]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[24]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[23]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[22]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[21]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[20]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[19]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[18]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[17]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[16]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[15]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[14]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[13]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[12]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[11]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[10]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[9]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[8]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[7]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[6]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[5]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[4]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[3]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[2]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[1]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_wrap_iram' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'wdata[0]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[31]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[30]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[29]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[28]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[27]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[26]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[25]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[24]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[23]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[22]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[21]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[20]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[19]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[18]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[17]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[16]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[15]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[14]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[13]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[12]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[11]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[10]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[9]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[8]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[7]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[6]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[5]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[4]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[3]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[2]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[1]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_mux_imm_add' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[0]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[31]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[30]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[29]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[28]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[27]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[26]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[25]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[24]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[23]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[22]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[21]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[20]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[19]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[18]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[17]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[16]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[15]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[14]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[13]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[12]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[11]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data0_in[10]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[31]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[30]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[29]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[28]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[27]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[26]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[25]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[24]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[23]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[22]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[21]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[20]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[19]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[18]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[17]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[16]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[15]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[14]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[13]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[12]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[11]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[10]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[9]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[8]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[7]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[6]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[5]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[4]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[3]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[2]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[1]' is connected to logic 0. 
+Warning: In design 'riscv_core_0', a pin on submodule 'u_crtl_mux' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data1_in[0]' is connected to logic 0. 
+Warning: In design 'alu_add_1', a pin on submodule 'add_48' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'hazard_detec_0', a pin on submodule 'r302' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'TC' is connected to logic 0. 
+Warning: In design 'alu_add_0', a pin on submodule 'add_48' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'alu_ex_0', a pin on submodule 'lt_108' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'TC' is connected to logic 0. 
+Warning: In design 'alu_ex_0', a pin on submodule 'lt_108' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'GE_LT' is connected to logic 1. 
+Warning: In design 'alu_ex_0', a pin on submodule 'lt_108' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'GE_GT_EQ' is connected to logic 0. 
+Warning: In design 'alu_ex_0', a pin on submodule 'lt_94' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'TC' is connected to logic 0. 
+Warning: In design 'alu_ex_0', a pin on submodule 'lt_94' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'GE_LT' is connected to logic 1. 
+Warning: In design 'alu_ex_0', a pin on submodule 'lt_94' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'GE_GT_EQ' is connected to logic 0. 
+Warning: In design 'alu_ex_0', a pin on submodule 'sub_87' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'alu_ex_0', a pin on submodule 'add_85' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'riscv_core_0', the same net is connected to more than one pin on submodule 'u_alu_add_4'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'data0[31]', 'data0[30]'', 'data0[29]', 'data0[28]', 'data0[27]', 'data0[26]', 'data0[25]', 'data0[24]', 'data0[23]', 'data0[22]', 'data0[21]', 'data0[20]', 'data0[19]', 'data0[18]', 'data0[17]', 'data0[16]', 'data0[15]', 'data0[14]', 'data0[13]', 'data0[12]', 'data0[11]', 'data0[10]', 'data0[9]', 'data0[8]', 'data0[7]', 'data0[6]', 'data0[5]', 'data0[4]', 'data0[3]', 'data0[1]', 'data0[0]'.
+Warning: In design 'riscv_core_0', the same net is connected to more than one pin on submodule 'u_wrap_iram'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'mem_wr', 'wdata[31]'', 'wdata[30]', 'wdata[29]', 'wdata[28]', 'wdata[27]', 'wdata[26]', 'wdata[25]', 'wdata[24]', 'wdata[23]', 'wdata[22]', 'wdata[21]', 'wdata[20]', 'wdata[19]', 'wdata[18]', 'wdata[17]', 'wdata[16]', 'wdata[15]', 'wdata[14]', 'wdata[13]', 'wdata[12]', 'wdata[11]', 'wdata[10]', 'wdata[9]', 'wdata[8]', 'wdata[7]', 'wdata[6]', 'wdata[5]', 'wdata[4]', 'wdata[3]', 'wdata[2]', 'wdata[1]', 'wdata[0]'.
+Warning: In design 'riscv_core_0', the same net is connected to more than one pin on submodule 'u_mux_imm_add'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'data1_in[31]', 'data1_in[30]'', 'data1_in[29]', 'data1_in[28]', 'data1_in[27]', 'data1_in[26]', 'data1_in[25]', 'data1_in[24]', 'data1_in[23]', 'data1_in[22]', 'data1_in[21]', 'data1_in[20]', 'data1_in[19]', 'data1_in[18]', 'data1_in[17]', 'data1_in[16]', 'data1_in[15]', 'data1_in[14]', 'data1_in[13]', 'data1_in[12]', 'data1_in[11]', 'data1_in[10]', 'data1_in[9]', 'data1_in[8]', 'data1_in[7]', 'data1_in[6]', 'data1_in[5]', 'data1_in[4]', 'data1_in[3]', 'data1_in[2]', 'data1_in[1]', 'data1_in[0]'.
+Warning: In design 'riscv_core_0', the same net is connected to more than one pin on submodule 'u_crtl_mux'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'data0_in[31]', 'data0_in[30]'', 'data0_in[29]', 'data0_in[28]', 'data0_in[27]', 'data0_in[26]', 'data0_in[25]', 'data0_in[24]', 'data0_in[23]', 'data0_in[22]', 'data0_in[21]', 'data0_in[20]', 'data0_in[19]', 'data0_in[18]', 'data0_in[17]', 'data0_in[16]', 'data0_in[15]', 'data0_in[14]', 'data0_in[13]', 'data0_in[12]', 'data0_in[11]', 'data0_in[10]', 'data1_in[31]', 'data1_in[30]', 'data1_in[29]', 'data1_in[28]', 'data1_in[27]', 'data1_in[26]', 'data1_in[25]', 'data1_in[24]', 'data1_in[23]', 'data1_in[22]', 'data1_in[21]', 'data1_in[20]', 'data1_in[19]', 'data1_in[18]', 'data1_in[17]', 'data1_in[16]', 'data1_in[15]', 'data1_in[14]', 'data1_in[13]', 'data1_in[12]', 'data1_in[11]', 'data1_in[10]', 'data1_in[9]', 'data1_in[8]', 'data1_in[7]', 'data1_in[6]', 'data1_in[5]', 'data1_in[4]', 'data1_in[3]', 'data1_in[2]', 'data1_in[1]', 'data1_in[0]'.
+Warning: In design 'alu_ex_0', the same net is connected to more than one pin on submodule 'lt_108'. (LINT-33)
+   Net 'n19' is connected to pins 'TC', 'GE_GT_EQ''.
+Warning: In design 'alu_ex_0', the same net is connected to more than one pin on submodule 'lt_94'. (LINT-33)
+   Net 'n21' is connected to pins 'TC', 'GE_GT_EQ''.
+1

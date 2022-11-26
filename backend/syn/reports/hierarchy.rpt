@@ -1,0 +1,318 @@
+ 
+****************************************
+Report : hierarchy
+Design : CHIP_TOP
+Version: O-2018.06-SP1
+Date   : Sat Nov 26 03:48:06 2022
+****************************************
+
+Attributes:
+    r - licensed design
+
+CHIP_TOP
+    riscv_core_0
+        AO22X2                                 slow
+        BUFX2                                  slow
+        CLKINVX40                              slow
+        DFFRQX2                                slow
+        DFFSX2                                 slow
+        INVX2                                  slow
+        NAND4X2                                slow
+        NOR2X2                                 slow
+        NOR4BX2                                slow
+        NOR4X2                                 slow
+        OR2X2                                  slow
+        XOR2XL                                 slow
+        alu_add_0
+            alu_add_0_DW01_add_0
+                ADDFX1                         slow
+                AND2X2                         slow
+                XOR2X1                         slow
+                XOR3XL                         slow
+        alu_add_1
+            alu_add_1_DW01_add_0
+                ADDFX1                         slow
+                AND2X2                         slow
+                XOR2X1                         slow
+                XOR3XL                         slow
+        alu_ctrl_0
+            AOI21X1                            slow
+            AOI32XL                            slow
+            AOI211X2                           slow
+            INVX2                              slow
+            NAND2X2                            slow
+            NAND3XL                            slow
+            NOR3X1                             slow
+            OAI22X1                            slow
+        alu_ex_0                                         r
+            AND2X2                             slow
+            AOI21X1                            slow
+            AOI22XL                            slow
+            AOI211X2                           slow
+            AOI221XL                           slow
+            AOI222XL                           slow
+            BUFX2                              slow
+            INVX2                              slow
+            MX2X1                              slow
+            MXI2X1                             slow
+            NAND2X2                            slow
+            NAND3XL                            slow
+            NAND4X2                            slow
+            NOR2BX1                            slow
+            NOR2X2                             slow
+            NOR3BX1                            slow
+            NOR3X1                             slow
+            NOR4BX2                            slow
+            NOR4X2                             slow
+            NOR4X4                             slow
+            OAI2BB1X1                          slow
+            OAI21X1                            slow
+            OAI22X1                            slow
+            OR3X2                              slow
+            XOR2X1                             slow
+            alu_ex_0_DW01_add_0
+                ADDFX1                         slow
+                AND2X2                         slow
+                XOR2X1                         slow
+                XOR3XL                         slow
+            alu_ex_0_DW01_sub_0
+                ADDFX1                         slow
+                INVX2                          slow
+                NAND2X2                        slow
+                XNOR2X1                        slow
+                XOR3XL                         slow
+            alu_ex_0_DW_cmp_0                            r
+                AND2X1                         slow
+                AO21X1                         slow
+                AO21X2                         slow
+                AOI2BB1X1                      slow
+                AOI21X1                        slow
+                AOI22XL                        slow
+                AOI31X1                        slow
+                AOI32XL                        slow
+                AOI221XL                       slow
+                CLKNAND2X2                     slow
+                INVX2                          slow
+                NAND2BX1                       slow
+                NAND3BX1                       slow
+                NOR2BX1                        slow
+                NOR3BX1                        slow
+                OAI2B11X1                      slow
+                OAI21X1                        slow
+                OAI22X1                        slow
+                OAI32XL                        slow
+                OAI211XL                       slow
+            alu_ex_0_DW_cmp_1                            r
+                AND2X1                         slow
+                AND2X2                         slow
+                AND3X1                         slow
+                AOI2BB1X1                      slow
+                AOI2BB2X1                      slow
+                AOI21X1                        slow
+                AOI22XL                        slow
+                AOI31X1                        slow
+                AOI32XL                        slow
+                AOI211X1                       slow
+                AOI221XL                       slow
+                CLKNAND2X2                     slow
+                INVX2                          slow
+                NAND3BX1                       slow
+                NOR2BX1                        slow
+                NOR2X1                         slow
+                OAI2B2X1                       slow
+                OAI2B11X1                      slow
+                OAI21X1                        slow
+                OAI22X1                        slow
+                OAI32XL                        slow
+                OAI211XL                       slow
+                OR2X1                          slow
+        ex_mem_0
+            DFFRQX2                            slow
+        forward_unit_0                                   r
+            INVX2                              slow
+            NAND3XL                            slow
+            NAND4X2                            slow
+            NAND4XL                            slow
+            NOR2XL                             slow
+            NOR3BX1                            slow
+            NOR3X1                             slow
+            NOR4X2                             slow
+            OAI21X1                            slow
+            OAI31X1                            slow
+            OR3X2                              slow
+            XNOR2X1                            slow
+            XOR2X1                             slow
+        hazard_detec_0
+            AOI22XL                            slow
+            AOI32XL                            slow
+            CLKINVX2                           slow
+            INVX2                              slow
+            NAND3XL                            slow
+            NOR4BX2                            slow
+            OAI32XL                            slow
+            hazard_detec_0_DW01_cmp6_0
+                AOI2BB1X1                      slow
+                AOI31X1                        slow
+                AOI32XL                        slow
+                AOI211X1                       slow
+                CLKNAND2X2                     slow
+                INVX2                          slow
+                NAND2BX1                       slow
+                NAND3BX1                       slow
+                NAND3XL                        slow
+                NAND4BX2                       slow
+                NOR2BX1                        slow
+                NOR2X1                         slow
+                NOR3BX1                        slow
+                NOR3X1                         slow
+                OA21X1                         slow
+                OAI2B1X1                       slow
+                OAI2B11X1                      slow
+                OAI2B11X2                      slow
+                OAI21X1                        slow
+                OAI31X1                        slow
+                OAI211XL                       slow
+                XOR2X1                         slow
+        id_ex_0
+            DFFRQX1                            slow
+            DFFRQX2                            slow
+            DFFRQXL                            slow
+        if_id_0
+            DFFRQX2                            slow
+            NOR2BX1                            slow
+        imm_gen_0
+            AOI21X1                            slow
+            AOI22XL                            slow
+            CLKINVX2                           slow
+            INVX2                              slow
+            NAND2BX2                           slow
+            NAND2X2                            slow
+            NAND2XL                            slow
+            NAND3XL                            slow
+            NAND4X2                            slow
+            NOR2BX1                            slow
+            NOR2X2                             slow
+            NOR3X1                             slow
+            OAI2B1X1                           slow
+            OAI2BB1X1                          slow
+            OAI2BB2X2                          slow
+            OAI21X1                            slow
+            OAI21XL                            slow
+            OAI33X2                            slow
+            OR2X2                              slow
+            OR3X2                              slow
+        main_ctrl_0
+            AOI22XL                            slow
+            AOI211X2                           slow
+            CLKINVX2                           slow
+            INVX2                              slow
+            INVX4                              slow
+            NAND2BX2                           slow
+            NAND2X2                            slow
+            NAND2X4                            slow
+            NAND3XL                            slow
+            NAND4X2                            slow
+            NOR2BX1                            slow
+            NOR2X2                             slow
+            NOR2XL                             slow
+            NOR3X1                             slow
+            NOR4X2                             slow
+            OAI21BX1                           slow
+            OAI21X1                            slow
+            OAI31X1                            slow
+            OR4X2                              slow
+            XNOR2X1                            slow
+        mem_wb_0
+            DFFRQX2                            slow
+        mux2_0
+            AO22X2                             slow
+            INVX2                              slow
+        mux2_1
+            AO22X2                             slow
+            INVX2                              slow
+        mux2_2
+            AO22X2                             slow
+            INVX2                              slow
+        mux2_3
+            AO22X2                             slow
+            INVX2                              slow
+        mux2_4
+            AO22X2                             slow
+            INVX2                              slow
+        mux3_0
+            AOI22XL                            slow
+            NOR2BX1                            slow
+            NOR2X2                             slow
+            OAI2BB1X1                          slow
+        mux3_1
+            AOI22XL                            slow
+            NOR2BX1                            slow
+            NOR2X2                             slow
+            OAI2BB1X1                          slow
+        mux3_2
+            AOI22XL                            slow
+            NOR2BX1                            slow
+            NOR2X2                             slow
+            OAI2BB1X1                          slow
+        mux3_3
+            AOI22XL                            slow
+            NOR2BX1                            slow
+            NOR2X2                             slow
+            OAI2BB1X1                          slow
+        regfile_0
+            AND2X1                             slow
+            AND2X2                             slow
+            AOI22XL                            slow
+            BUFX2                              slow
+            CLKAND2X2                          slow
+            CLKINVX2                           slow
+            CLKNAND2X2                         slow
+            DFFRQX2                            slow
+            INVX2                              slow
+            NAND2BX2                           slow
+            NAND2X1                            slow
+            NAND2X2                            slow
+            NAND4X1                            slow
+            NOR2BX1                            slow
+            NOR2X1                             slow
+            NOR2X2                             slow
+            OAI2BB2X2                          slow
+            OAI21X1                            slow
+        wrap_dram_0                                      r
+            AND2X2                             slow
+            AO22X2                             slow
+            AOI2BB1X2                          slow
+            AOI22XL                            slow
+            AOI31X1                            slow
+            AOI31X2                            slow
+            AOI221XL                           slow
+            AOI222XL                           slow
+            BUFX2                              slow
+            CLKINVX2                           slow
+            DFFRQX2                            slow
+            DFFRX1                             slow
+            INVX2                              slow
+            NAND2BX2                           slow
+            NAND2X2                            slow
+            NAND3XL                            slow
+            NAND4BX2                           slow
+            NOR2BX1                            slow
+            NOR2X2                             slow
+            NOR3X1                             slow
+            NOR3X4                             slow
+            OA21X1                             slow
+            OAI2B1X1                           slow
+            OAI2BB1X1                          slow
+            OAI21X1                            slow
+            OAI21X2                            slow
+            OAI21XL                            slow
+            OAI22X2                            slow
+            OAI31X1                            slow
+            OAI221X1                           slow
+            OAI221X2                           slow
+            OR2X2                              slow
+            SRAM_4096_32                       USERLIB
+        wrap_iram_0
+            OR2X2                              slow
+            SRAM_4096_32                       USERLIB
+1

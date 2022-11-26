@@ -1,0 +1,8 @@
+CHIP_TOP    U_CHIP_TOP(
+
+    //system signal
+    .sys_clk        (sys_clk        ),
+    .sys_rst_n      (sys_rst_n      ),
+    .led_test       (led_test       )
+);
+

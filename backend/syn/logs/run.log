@@ -1,0 +1,894 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/crazy/.synopsys_dv_prefs.tcl
+# *********************************************************************************
+# Project Name : DC-SYN
+# Author       : Core_kingdom
+# Website      : https://blog.csdn.net/weixin_40377195
+# Create Time  : 2022-08-31
+# File Name    : 
+# Module Name  :
+# Called By    :
+# Abstract     :
+#
+# 
+# *********************************************************************************
+# Modification History:
+# Date         By              Version                 Change Description
+# -----------------------------------------------------------------------
+# 2022-08-31    Macro           1.0                     Original
+#  
+# *********************************************************************************
+set DESIGN "CHIP_TOP"
+CHIP_TOP
+set designkit "/project/designkit"
+/project/designkit
+#设置搜索路径
+set search_path "${designkit}/TSMC_90/aci/sc-x/synopsys ${designkit}/TSMC_90/aci/sc-x/symbols ${designkit}/TSMC_90/aci/sc-x/libsi ${designkit}/TSMC_90/aci/sc-x/libspm /project/CK_Riscv/libs/DP_SRAM ./ ${designkit}/TSMC_90/aci/sc-x/symbols/synopsys"   
+/project/designkit/TSMC_90/aci/sc-x/synopsys /project/designkit/TSMC_90/aci/sc-x/symbols /project/designkit/TSMC_90/aci/sc-x/libsi /project/designkit/TSMC_90/aci/sc-x/libspm /project/CK_Riscv/libs/DP_SRAM ./ /project/designkit/TSMC_90/aci/sc-x/symbols/synopsys
+set synthetic_library "/opt/synopsys/dc_2018/libraries/syn/dw_foundation.sldb"
+/opt/synopsys/dc_2018/libraries/syn/dw_foundation.sldb
+#设置标准元件库
+set target_library " slow.db SRAM_4096_32_ff_1.1_125.0_syn.db"     
+ slow.db SRAM_4096_32_ff_1.1_125.0_syn.db
+#set link_library   "* $target_library /home/ICer/ic_prjs/CK_Riscv/libs/DP_SRAM"
+set link_library   "* $target_library $synthetic_library"
+*  slow.db SRAM_4096_32_ff_1.1_125.0_syn.db /opt/synopsys/dc_2018/libraries/syn/dw_foundation.sldb
+#设置标准元件图标库
+set symbol_library " tsmc090.sdb "  
+ tsmc090.sdb 
+set access_internal_pins true
+true
+#设置reports文件夹
+set report_path "./reports"    
+./reports
+#设置outputs文件夹
+set output_path "./outputs"    
+./outputs
+# define ALIB generate directory
+set_app_var alib_library_analysis_path "./work"
+./work
+# svf creation
+set_svf ${output_path}/${DESIGN}.svf
+1
+#读取verilog设计文件
+source ./input/files.tcl
+Loading db file '/project/designkit/TSMC_90/aci/sc-x/synopsys/slow.db'
+Loading db file '/project/CK_Riscv/libs/DP_SRAM/SRAM_4096_32_ff_1.1_125.0_syn.db'
+Loading db file '/opt/synopsys/dc_2018/libraries/syn/dw_foundation.sldb'
+Loading db file '/opt/synopsys/dc_2018/libraries/syn/gtech.db'
+Loading db file '/opt/synopsys/dc_2018/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'USERLIB'
+  Loading link library 'gtech'
+Loading verilog file '/project/CK_Riscv/module/riscv_core/rtl_v00/imm_gen.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/riscv_core/rtl_v00/imm_gen.v
+
+Statistics for case statements in always block at line 52 in file
+	'/project/CK_Riscv/module/riscv_core/rtl_v00/imm_gen.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            53            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/riscv_core/rtl_v00/imm_gen.db:imm_gen'
+Loaded 1 design.
+Current design is 'imm_gen'.
+Loading verilog file '/project/CK_Riscv/module/riscv_core/rtl_v00/alu_ctrl.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/riscv_core/rtl_v00/alu_ctrl.v
+Warning:  /project/CK_Riscv/module/riscv_core/rtl_v00/alu_ctrl.v:75: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 74 in file
+	'/project/CK_Riscv/module/riscv_core/rtl_v00/alu_ctrl.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            75            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/riscv_core/rtl_v00/alu_ctrl.db:alu_ctrl'
+Loaded 1 design.
+Current design is 'alu_ctrl'.
+Loading verilog file '/project/CK_Riscv/module/riscv_core/rtl_v00/foward_unit.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/riscv_core/rtl_v00/foward_unit.v
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/riscv_core/rtl_v00/forward_unit.db:forward_unit'
+Loaded 1 design.
+Current design is 'forward_unit'.
+Loading verilog file '/project/CK_Riscv/module/riscv_core/rtl_v00/hazard_detec.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/riscv_core/rtl_v00/hazard_detec.v
+
+Statistics for case statements in always block at line 63 in file
+	'/project/CK_Riscv/module/riscv_core/rtl_v00/hazard_detec.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            65            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/riscv_core/rtl_v00/hazard_detec.db:hazard_detec'
+Loaded 1 design.
+Current design is 'hazard_detec'.
+Loading verilog file '/project/CK_Riscv/module/riscv_core/rtl_v00/alu_ex.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/riscv_core/rtl_v00/alu_ex.v
+Warning:  /project/CK_Riscv/module/riscv_core/rtl_v00/alu_ex.v:119: signed to unsigned assignment occurs. (VER-318)
+Warning:  /project/CK_Riscv/module/riscv_core/rtl_v00/alu_ex.v:120: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 82 in file
+	'/project/CK_Riscv/module/riscv_core/rtl_v00/alu_ex.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            83            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/riscv_core/rtl_v00/alu_ex.db:alu_ex'
+Loaded 1 design.
+Current design is 'alu_ex'.
+Loading verilog file '/project/CK_Riscv/module/riscv_core/rtl_v00/alu_add.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/riscv_core/rtl_v00/alu_add.v
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/riscv_core/rtl_v00/alu_add.db:alu_add'
+Loaded 1 design.
+Current design is 'alu_add'.
+Loading verilog file '/project/CK_Riscv/module/riscv_core/rtl_v00/regfile.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/riscv_core/rtl_v00/regfile.v
+
+Statistics for case statements in always block at line 54 in file
+	'/project/CK_Riscv/module/riscv_core/rtl_v00/regfile.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            90            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine regfile line 54 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/regfile.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    reg_bank_reg     | Flip-flop | 1024  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine regfile line 129 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/regfile.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rs_reg1_rdata_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine regfile line 139 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/regfile.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rs_reg2_rdata_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|   regfile/136    |   32   |   32    |      5       |
+|   regfile/146    |   32   |   32    |      5       |
+======================================================
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/riscv_core/rtl_v00/regfile.db:regfile'
+Loaded 1 design.
+Current design is 'regfile'.
+Loading verilog file '/project/CK_Riscv/module/riscv_core/rtl_v00/mem_wb.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/riscv_core/rtl_v00/mem_wb.v
+
+Inferred memory devices in process
+	in routine mem_wb line 66 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/mem_wb.v'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+|   reg_wr_line_out_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| mem2reg_sel_line_out_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+====================================================================================
+
+Inferred memory devices in process
+	in routine mem_wb line 81 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/mem_wb.v'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+| alu_ex_result_line_out_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine mem_wb line 88 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/mem_wb.v'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+| reg_wb_addr_line_out_reg | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+====================================================================================
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/riscv_core/rtl_v00/mem_wb.db:mem_wb'
+Loaded 1 design.
+Current design is 'mem_wb'.
+Loading verilog file '/project/CK_Riscv/module/riscv_core/rtl_v00/if_id.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/riscv_core/rtl_v00/if_id.v
+
+Inferred memory devices in process
+	in routine if_id line 52 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/if_id.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   PC_line_out_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/riscv_core/rtl_v00/if_id.db:if_id'
+Loaded 1 design.
+Current design is 'if_id'.
+Loading verilog file '/project/CK_Riscv/module/riscv_core/rtl_v00/main_ctrl.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/riscv_core/rtl_v00/main_ctrl.v
+
+Statistics for case statements in always block at line 64 in file
+	'/project/CK_Riscv/module/riscv_core/rtl_v00/main_ctrl.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            65            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/riscv_core/rtl_v00/main_ctrl.db:main_ctrl'
+Loaded 1 design.
+Current design is 'main_ctrl'.
+Loading verilog file '/project/CK_Riscv/module/riscv_core/rtl_v00/ex_mem.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/riscv_core/rtl_v00/ex_mem.v
+
+Inferred memory devices in process
+	in routine ex_mem line 71 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/ex_mem.v'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+|   mem_rd_line_out_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   mem_op_line_out_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   reg_wr_line_out_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| mem2reg_sel_line_out_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   mem_wr_line_out_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+====================================================================================
+
+Inferred memory devices in process
+	in routine ex_mem line 89 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/ex_mem.v'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+| alu_ex_result_line_out_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine ex_mem line 98 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/ex_mem.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| reg2_data_line_out_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine ex_mem line 105 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/ex_mem.v'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+| reg_wb_addr_line_out_reg | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+====================================================================================
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/riscv_core/rtl_v00/ex_mem.db:ex_mem'
+Loaded 1 design.
+Current design is 'ex_mem'.
+Loading verilog file '/project/CK_Riscv/module/riscv_core/rtl_v00/id_ex.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/riscv_core/rtl_v00/id_ex.v
+
+Inferred memory devices in process
+	in routine id_ex line 94 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/id_ex.v'.
+========================================================================================
+|        Register Name         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+========================================================================================
+|    exAlu_op_line_out_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+| exAlu_data1_sel_line_out_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     reg_wr_line_out_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   mem2reg_sel_line_out_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     mem_wr_line_out_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     mem_rd_line_out_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     mem_op_line_out_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+========================================================================================
+
+Inferred memory devices in process
+	in routine id_ex line 136 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/id_ex.v'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+| imm_gen_data_line_out_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+=====================================================================================
+
+Inferred memory devices in process
+	in routine id_ex line 143 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/id_ex.v'.
+==========================================================================================
+|         Register Name          |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==========================================================================================
+| instruct_alu_ctrl_line_out_reg | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+==========================================================================================
+
+Inferred memory devices in process
+	in routine id_ex line 150 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/id_ex.v'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+| reg_wb_addr_line_out_reg | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+====================================================================================
+
+Inferred memory devices in process
+	in routine id_ex line 157 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/id_ex.v'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+| rs_reg1_addr_line_out_reg | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+| rs_reg2_addr_line_out_reg | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+=====================================================================================
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/riscv_core/rtl_v00/id_ex.db:id_ex'
+Loaded 1 design.
+Current design is 'id_ex'.
+Loading verilog file '/project/CK_Riscv/module/riscv_core/rtl_v00/mux2.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/riscv_core/rtl_v00/mux2.v
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/riscv_core/rtl_v00/mux2.db:mux2'
+Loaded 1 design.
+Current design is 'mux2'.
+Loading verilog file '/project/CK_Riscv/module/riscv_core/rtl_v00/mux3.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/riscv_core/rtl_v00/mux3.v
+
+Statistics for case statements in always block at line 48 in file
+	'/project/CK_Riscv/module/riscv_core/rtl_v00/mux3.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            49            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/riscv_core/rtl_v00/mux3.db:mux3'
+Loaded 1 design.
+Current design is 'mux3'.
+Loading verilog file '/project/CK_Riscv/module/riscv_core/rtl_v00/riscv_core.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/riscv_core/rtl_v00/riscv_core.v
+Warning:  /project/CK_Riscv/module/riscv_core/rtl_v00/riscv_core.v:445: the undeclared symbol 'alu_ex_zero' assumed to have the default net type, which is 'wire'. (VER-936)
+
+Inferred memory devices in process
+	in routine riscv_core line 151 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/riscv_core.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    led_test_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine riscv_core line 171 in file
+		'/project/CK_Riscv/module/riscv_core/rtl_v00/riscv_core.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       PC_reg        | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/riscv_core/rtl_v00/riscv_core.db:riscv_core'
+Loaded 1 design.
+Current design is 'riscv_core'.
+Loading verilog file '/project/CK_Riscv/module/wrap/rtl_v00/wrap_dram.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/wrap/rtl_v00/wrap_dram.v
+
+Statistics for case statements in always block at line 64 in file
+	'/project/CK_Riscv/module/wrap/rtl_v00/wrap_dram.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            66            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 78 in file
+	'/project/CK_Riscv/module/wrap/rtl_v00/wrap_dram.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            79            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 121 in file
+	'/project/CK_Riscv/module/wrap/rtl_v00/wrap_dram.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           122            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine wrap_dram line 110 in file
+		'/project/CK_Riscv/module/wrap/rtl_v00/wrap_dram.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    mem_op_r_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   addr_low2_r_reg   | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/wrap/rtl_v00/wrap_dram.db:wrap_dram'
+Loaded 1 design.
+Current design is 'wrap_dram'.
+Loading verilog file '/project/CK_Riscv/module/wrap/rtl_v00/wrap_iram.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /project/CK_Riscv/module/wrap/rtl_v00/wrap_iram.v
+Presto compilation completed successfully.
+Current design is now '/project/CK_Riscv/module/wrap/rtl_v00/wrap_iram.db:wrap_iram'
+Loaded 1 design.
+Current design is 'wrap_iram'.
+Loading verilog file '/project/CK_Riscv/module/chip/rtl_v00/CHIP_TOP.v'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Performing 'read' command.
+Compiling source file /project/CK_Riscv/module/chip/rtl_v00/CHIP_TOP.v
+Reading with netlist reader (equivalent to -netlist option).
+Verilog netlist reader completed successfully.
+Current design is now '/project/CK_Riscv/module/chip/rtl_v00/CHIP_TOP.db:CHIP_TOP'
+Loaded 1 design.
+Current design is 'CHIP_TOP'.
+CHIP_TOP
+# define current block name
+current_design ${DESIGN}   
+Current design is 'CHIP_TOP'.
+{CHIP_TOP}
+#工艺库链接
+link   
+
+  Linking design 'CHIP_TOP'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (18 designs)              /project/CK_Riscv/module/chip/rtl_v00/CHIP_TOP.db, etc
+  slow (library)              /project/designkit/TSMC_90/aci/sc-x/synopsys/slow.db
+  USERLIB (library)           /project/CK_Riscv/libs/DP_SRAM/SRAM_4096_32_ff_1.1_125.0_syn.db
+  dw_foundation.sldb (library) /opt/synopsys/dc_2018/libraries/syn/dw_foundation.sldb
+
+1
+uniquify -force
+Information: Uniquified 1 instances of design 'imm_gen'. (OPT-1056)
+Information: Uniquified 1 instances of design 'alu_ctrl'. (OPT-1056)
+Information: Uniquified 1 instances of design 'forward_unit'. (OPT-1056)
+Information: Uniquified 1 instances of design 'hazard_detec'. (OPT-1056)
+Information: Uniquified 1 instances of design 'alu_ex'. (OPT-1056)
+Information: Uniquified 2 instances of design 'alu_add'. (OPT-1056)
+Information: Uniquified 1 instances of design 'regfile'. (OPT-1056)
+Information: Uniquified 1 instances of design 'mem_wb'. (OPT-1056)
+Information: Uniquified 1 instances of design 'if_id'. (OPT-1056)
+Information: Uniquified 1 instances of design 'main_ctrl'. (OPT-1056)
+Information: Uniquified 1 instances of design 'ex_mem'. (OPT-1056)
+Information: Uniquified 1 instances of design 'id_ex'. (OPT-1056)
+Information: Uniquified 5 instances of design 'mux2'. (OPT-1056)
+Information: Uniquified 4 instances of design 'mux3'. (OPT-1056)
+Information: Uniquified 1 instances of design 'riscv_core'. (OPT-1056)
+Information: Uniquified 1 instances of design 'wrap_dram'. (OPT-1056)
+Information: Uniquified 1 instances of design 'wrap_iram'. (OPT-1056)
+1
+set     design_name     [get_object_name [current_design]]
+Current design is 'CHIP_TOP'.
+CHIP_TOP
+#设置线负载模型
+#set_wire_load_model -name "smic18_wl10"    
+# set_wire_load_mode top
+#设置时钟，周期156ns，脉宽0-78ns
+create_clock -period 20 -waveform {0 10} [get_ports sys_clk]  -name sys_clk    
+1
+#分频64后的时钟
+#create_generated_clock  [get_pins div/clk_div] -source [get_ports sys_clk]  -divide_by 64 -name clk_div   
+#延迟时间2.5ns
+set_clock_latency 1.5 sys_clk 
+1
+#翻转时间0.3ns
+set_clock_transition 0.3 sys_clk   
+1
+#建立时间1.5ns
+set_clock_uncertainty 1.0 -setup sys_clk   
+1
+#保持时间0.3ns
+set_clock_uncertainty 0.3 -hold sys_clk    
+1
+#设置输入驱动强度为0get_ports
+set_drive 0 [list sys_clk sys_rst_n ]      
+1
+#设置驱动单元
+#set_driving_cell -lib_cell NAND2X1  in   
+#设置输入延时35ns
+set_input_delay  10 -clock [get_clocks sys_clk] {sys_rst_n}   
+1
+#设置输出延时35ns
+set_output_delay 10 -clock [get_clocks sys_clk] [get_ports led_test]  
+1
+#设置输出负载为2pF
+set_load          2        [all_outputs]    
+1
+set_max_fanout  2000 [all_outputs] 
+Error: 'set_max_fanout' cannot be set on an output port 'led_test'. (UID-91)
+0
+set_max_area 0
+1
+check_design > $report_path/check_design_before_compile.rpt
+check_timing > $report_path/check_timing_before_compile.rpt
+compile
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.1 |     *     |
+============================================================================
+
+
+Information: There are 498 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: The trip points for the library named USERLIB differ from those in the library named slow. (TIM-164)
+Warning: Operating condition slow set on design CHIP_TOP has different process,
+voltage and temperatures parameters than the parameters at which target library 
+USERLIB is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'forward_unit_0'
+Information: Added key list 'DesignWare' to design 'forward_unit_0'. (DDB-72)
+  Processing 'mux2_0'
+  Processing 'mem_wb_0'
+  Processing 'wrap_dram_0'
+Information: Added key list 'DesignWare' to design 'wrap_dram_0'. (DDB-72)
+  Processing 'ex_mem_0'
+  Processing 'alu_ex_0'
+  Processing 'alu_ctrl_0'
+  Processing 'mux3_0'
+  Processing 'id_ex_0'
+  Processing 'imm_gen_0'
+  Processing 'regfile_0'
+  Processing 'main_ctrl_0'
+  Processing 'alu_add_0'
+  Processing 'hazard_detec_0'
+  Processing 'if_id_0'
+  Processing 'wrap_iram_0'
+  Processing 'riscv_core_0'
+  Processing 'CHIP_TOP'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Mapping 'alu_ex_0_DW_cmp_0'
+  Mapping 'alu_ex_0_DW_cmp_1'
+  Mapping 'DW_leftsh'
+Information: Added key list 'DesignWare' to design 'alu_ex_0'. (DDB-72)
+  Mapping 'DW_leftsh'
+  Processing 'alu_ex_0_DW01_sub_0'
+  Processing 'alu_ex_0_DW01_add_0'
+  Mapping 'DW_rightsh'
+  Mapping 'DW_rightsh'
+  Processing 'alu_add_0_DW01_add_0'
+  Processing 'hazard_detec_0_DW01_cmp6_0'
+  Processing 'alu_add_1_DW01_add_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:11  985542.5      0.00       0.0       4.3                          
+    0:00:11  985542.5      0.00       0.0       4.3                          
+    0:00:11  985542.5      0.00       0.0       4.3                          
+    0:00:11  985542.5      0.00       0.0       4.3                          
+    0:00:11  985542.5      0.00       0.0       4.3                          
+    0:00:14  932085.6      0.00       0.0       4.3                          
+    0:00:14  932047.5      0.00       0.0       4.3                          
+    0:00:15  932091.2      0.00       0.0       4.3                          
+    0:00:15  932068.7      0.00       0.0       4.3                          
+    0:00:15  932087.0      0.00       0.0       4.3                          
+    0:00:15  932067.9      0.00       0.0       4.3                          
+    0:00:15  932070.8      0.00       0.0       4.3                          
+    0:00:15  932091.9      0.00       0.0       4.3                          
+    0:00:15  932067.9      0.00       0.0       4.3                          
+    0:00:15  932067.9      0.00       0.0       4.3                          
+    0:00:15  932067.9      0.00       0.0       4.3                          
+    0:00:16  932077.1      0.00       0.0       0.0                          
+    0:00:16  932077.1      0.00       0.0       0.0                          
+    0:00:16  932077.1      0.00       0.0       0.0                          
+    0:00:16  932077.1      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:16  932077.1      0.00       0.0       0.0                          
+    0:00:16  932077.1      0.00       0.0       0.0                          
+    0:00:16  932058.8      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:16  932058.8      0.00       0.0       0.0                          
+    0:00:16  932058.8      0.00       0.0       0.0                          
+    0:00:17  931975.5      0.00       0.0       0.0                          
+    0:00:17  931924.0      0.00       0.0       0.0                          
+    0:00:17  931861.2      0.00       0.0       0.0                          
+    0:00:17  931830.2      0.00       0.0       0.0                          
+    0:00:17  931796.3      0.00       0.0       0.0                          
+    0:00:17  931796.3      0.00       0.0       0.0                          
+    0:00:17  931796.3      0.00       0.0       0.0                          
+    0:00:17  931794.2      0.00       0.0       0.0                          
+    0:00:17  931794.2      0.00       0.0       0.0                          
+    0:00:17  931794.2      0.00       0.0       0.0                          
+    0:00:17  931794.2      0.00       0.0       0.0                          
+    0:00:17  931794.2      0.00       0.0       0.0                          
+    0:00:17  931794.2      0.00       0.0       0.0                          
+    0:00:18  931506.3      0.00       0.0       0.0                          
+    0:00:18  930937.6      0.00       0.0       0.0                          
+    0:00:19  930344.2      0.00       0.0       0.0                          
+    0:00:19  930083.1      0.00       0.0       0.0                          
+    0:00:20  930069.0      0.00       0.0       0.0                          
+    0:00:20  930069.0      0.00       0.0       0.0                          
+    0:00:20  930069.0      0.00       0.0       0.0                          
+    0:00:20  930069.0      0.00       0.0       0.0                          
+    0:00:20  930069.0      0.00       0.0       0.0                          
+    0:00:20  930069.0      0.00       0.0       0.0                          
+    0:00:20  930069.0      0.00       0.0       0.0                          
+Loading db file '/project/designkit/TSMC_90/aci/sc-x/synopsys/slow.db'
+Loading db file '/project/CK_Riscv/libs/DP_SRAM/SRAM_4096_32_ff_1.1_125.0_syn.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'CHIP_TOP' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'u_riscv_core/u_wrap_dram/rstn': 1334 load(s), 1 driver(s)
+     Net 'u_riscv_core/u_mem_wb/clk': 1336 load(s), 1 driver(s)
+1
+compile -incremental_mapping -map_effort high
+
+Information: There are 412 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition slow set on design CHIP_TOP has different process,
+voltage and temperatures parameters than the parameters at which target library 
+USERLIB is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (High effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+  Selecting implementations
+  Selecting implementations
+  Selecting implementations
+  Selecting implementations
+  Mapping 'alu_ex_0_DW_cmp_2'
+  Mapping 'alu_ex_0_DW_cmp_3'
+  Mapping 'alu_ex_0_DW_cmp_4'
+  Mapping 'alu_ex_0_DW_cmp_5'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03  934105.0      0.00       0.0       0.0                          
+    0:00:03  934105.0      0.00       0.0       0.0                          
+    0:00:03  934105.0      0.00       0.0       0.0                          
+    0:00:03  934105.0      0.00       0.0       0.0                          
+    0:00:03  934105.0      0.00       0.0       0.0                          
+    0:00:03  930532.6      0.00       0.0       0.0                          
+    0:00:03  930532.6      0.00       0.0       0.0                          
+    0:00:03  930532.6      0.00       0.0       0.0                          
+    0:00:03  930532.6      0.00       0.0       0.0                          
+    0:00:03  930532.6      0.00       0.0       0.0                          
+    0:00:03  930532.6      0.00       0.0       0.0                          
+    0:00:03  930532.6      0.00       0.0       0.0                          
+    0:00:03  930532.6      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03  930532.6      0.00       0.0       0.0                          
+    0:00:03  930532.6      0.00       0.0       0.0                          
+    0:00:03  930531.9      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03  930531.9      0.00       0.0       0.0                          
+    0:00:03  930531.9      0.00       0.0       0.0                          
+    0:00:04  930525.5      0.00       0.0       0.0                          
+    0:00:04  930525.5      0.00       0.0       0.0                          
+    0:00:04  930525.5      0.00       0.0       0.0                          
+    0:00:04  930404.1      0.00       0.0       0.0                          
+    0:00:05  930059.8      0.00       0.0       0.0                          
+    0:00:10  930057.7      0.00       0.0       0.0                          
+    0:00:11  930057.0      0.00       0.0       0.0                          
+    0:00:11  930054.9      0.00       0.0       0.0                          
+    0:00:12  930053.5      0.00       0.0       0.0                          
+    0:00:12  930052.8      0.00       0.0       0.0                          
+    0:00:12  930052.8      0.00       0.0       0.0                          
+    0:00:12  930051.3      0.00       0.0       0.0                          
+    0:00:12  930051.3      0.00       0.0       0.0                          
+    0:00:12  930051.3      0.00       0.0       0.0                          
+    0:00:12  930051.3      0.00       0.0       0.0                          
+    0:00:12  930051.3      0.00       0.0       0.0                          
+    0:00:12  930051.3      0.00       0.0       0.0                          
+    0:00:12  930051.3      0.00       0.0       0.0                          
+    0:00:12  930051.3      0.00       0.0       0.0                          
+    0:00:12  930051.3      0.00       0.0       0.0                          
+    0:00:12  930051.3      0.00       0.0       0.0                          
+Loading db file '/project/designkit/TSMC_90/aci/sc-x/synopsys/slow.db'
+Loading db file '/project/CK_Riscv/libs/DP_SRAM/SRAM_4096_32_ff_1.1_125.0_syn.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'CHIP_TOP' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'u_riscv_core/u_wrap_dram/rstn': 1334 load(s), 1 driver(s)
+     Net 'u_riscv_core/u_mem_wb/clk': 1336 load(s), 1 driver(s)
+1
+#时序描述
+write_sdf -version 2.1         $output_path/${design_name}_post_dc.sdf   
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/project/CK_Riscv/backend/syn/outputs/CHIP_TOP_post_dc.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+Warning: Design 'CHIP_TOP' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+1
+write -f ddc -hier -output     $output_path/${design_name}_post_dc.ddc
+Writing ddc file './outputs/CHIP_TOP_post_dc.ddc'.
+1
+#网表
+write -f verilog -hier -output $output_path/${design_name}_post_dc.v   
+Writing verilog file '/project/CK_Riscv/backend/syn/outputs/CHIP_TOP_post_dc.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Changed wire name if_flush to if_flush_snps_wire in module hazard_detec_0.  Please use the change_names command to make the correct changes before invoking the verilog writer. (VO-2)
+Warning: Verilog writer has added 22 nets to module riscv_core_0 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+#约束
+write_sdc                      $output_path/${design_name}_post_dc.sdc  
+1
+#close svf
+set_svf -off
+1
+report_constraint -all_violators -verbose          > $report_path/constraint.rpt
+report_qor                > $report_path/qor.rpt
+report_power              > $report_path/power.rpt
+report_area               > $report_path/area.rpt
+report_cell               > $report_path/cell.rpt
+report_clock              > $report_path/sys_clk.rpt
+report_hierarchy          > $report_path/hierarchy.rpt
+report_design             > $report_path/design.rpt
+report_reference          > $report_path/reference.rpt
+report_timing             > $report_path/timing.rpt
+check_design > $report_path/check_design_post_compile.rpt
+check_timing > $report_path/check_timing_post_compile.rpt
+exit
+
+Memory usage for main task 198 Mbytes.
+Memory usage for this session 198 Mbytes.
+CPU usage for this session 37 seconds ( 0.01 hours ).
+
+Thank you...

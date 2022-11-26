@@ -1,0 +1,15 @@
+imm_gen.v
+alu_ctrl.v
+foward_unit.v
+hazard_detec.v
+alu_ex.v
+alu_add.v
+regfile.v
+mem_wb.v
+if_id.v
+main_ctrl.v
+ex_mem.v
+id_ex.v
+mux2.v
+mux3.v
+riscv_core.v

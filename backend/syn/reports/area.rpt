@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : area
+Design : CHIP_TOP
+Version: O-2018.06-SP1
+Date   : Sat Nov 26 03:48:06 2022
+****************************************
+
+Library(s) Used:
+
+    slow (File: /project/designkit/TSMC_90/aci/sc-x/synopsys/slow.db)
+    USERLIB (File: /project/CK_Riscv/libs/DP_SRAM/SRAM_4096_32_ff_1.1_125.0_syn.db)
+
+Number of ports:                         3213
+Number of nets:                          9834
+Number of cells:                         6607
+Number of combinational cells:           5150
+Number of sequential cells:              1423
+Number of macros/black boxes:               2
+Number of buf/inv:                        418
+Number of references:                       1
+
+Combinational area:              24921.792562
+Buf/Inv area:                      937.036830
+Noncombinational area:           20709.360047
+Macro/Black Box area:           884420.187500
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                930051.340109
+Total area:                 undefined
+1
