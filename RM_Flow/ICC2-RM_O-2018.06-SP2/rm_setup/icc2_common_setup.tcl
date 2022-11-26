@@ -11,7 +11,7 @@ puts "RM-info : Running script [info script]\n"
 ## Required variables
 ## These variables must be correctly filled in for the flow to run properly
 ##########################################################################################
-set DESIGN_NAME 		"CHIP_TOP" ;# Name of the design to be worked on
+set DESIGN_NAME 		"" ;# Name of the design to be worked on
 set LIBRARY_SUFFIX		"" ;# Suffix for the design library name ; default is unspecified   
 set DESIGN_LIBRARY 		"${DESIGN_NAME}${LIBRARY_SUFFIX}" ;# Name of the design library; default is ${DESIGN_NAME}${LIBRARY_SUFFIX}
 
@@ -130,7 +130,7 @@ set PHYSICAL_HIERARCHY_LEVEL	"" 	;# Specify the current level of hierarchy for t
 					;# 	for hier PNR: required and auto set if unpack_rm_dirs.pl is used; (see README.unpack_rm_dirs.txt for details)
 					;# 	for flat PNR and for DP: not used.
 
-set RELEASE_DIR_DP		"../../release/dp" 	;# Specify the release directory of DP RM; 
+set RELEASE_DIR_DP		"" 	;# Specify the release directory of DP RM; 
 					;# this is where init_design.tcl of PNR flow gets DP RM released libraries; 
 					;# 	for hier PNR: required and auto set if unpack_rm_dirs.pl is used; (see README.unpack_rm_dirs.txt for details)
 					;# 	for flat PNR: required if INIT_DESIGN_INPUT = DP_RM_NDM, as init_design.tcl needs to know where DP RM libraries are
@@ -139,7 +139,7 @@ set RELEASE_LABEL_NAME_DP 	"for_pnr"
 					;# Specify the label name of the block in the DP RM released library;
 					;# this is the label name which init_design.tcl of PNR flow will open. 
 
-set RELEASE_DIR_PNR		"../../release/pnr" 	;# Specify the release directory of PNR RM; 
+set RELEASE_DIR_PNR		"" 	;# Specify the release directory of PNR RM; 
 					;# this is where the init_design.tcl of hierarchical PNR flow gets the sub-block libraries;	
 					;# 	for hier PNR: required and auto set if unpack_rm_dirs.pl is used; (see README.unpack_rm_dirs.txt for details)
 					;# 	for flat PNR and for DP: not used.

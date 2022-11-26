@@ -1,0 +1,402 @@
+##########################################################################################
+# Synopsys(R) IC Compiler II(TM) Flat Design Planning Reference Methodology
+# Version: O-2018.06-SP2 (October 8, 2018)
+# Copyright (C) 2014-2018 Synopsys, Inc. All rights reserved.
+##########################################################################################
+
+N-2017.09 Updates
+=================
+############################################################
+Updates for rm_setup/Makefile_dp_flat
+############################################################
+
+A new variable called PLACE_IO has been added which when set to "true", enables the 
+place_io capability to be used. When set to "false", the place_io flow is skipped. 
+The default value of PLACE_IO is "true".
+
+############################################################
+Updates for rm_setup/icc2_common_setup.tcl
+############################################################
+
+1. Added the following variable:
+   
+   - LIBRARY_SUFFIX 
+   
+     Use this variable to define a suffix for the design library name.
+     In previous releases, a hard coded suffix of ".nlib" was used for
+     the design library name. The default value of this variable is "".
+     This enables you to easily distinguish vendor supplied reference 
+     libraries from libraries that you create (e.g. design libraries).
+
+############################################################
+Updates for rm_setup/icc2_dp_setup.tcl
+############################################################
+
+Added two variables to determine the type of placement that is desired for std cells 
+and/or macros. The variables are the following:
+
+   - CONGESTION_DRIVEN_PLACEMENT
+   
+     Use this variable to enable congestion-driven placement.
+     Set to one of the following: std, macro, or both (default).
+  
+   - TIMING_DRIVEN_PLACEMENT
+
+     Use this variable to enable timing-driven placement.
+     Set to one of the following: std, macro, or both.
+     Timing-driven placement is off by default; the default value of this variable is "".
+
+############################################################
+Updates for the following files under rm_icc2_dp_scripts/
+############################################################
+
+create_power.tcl  - Minor change involving check_pg_connectivity setting.
+                  - Added check_mv_design -erc_mode and 
+                    check_mv_design -power_connectivity reporting
+
+init_dp.tcl       - Changed the process for creating black boxes.
+                    The libraries created in init_dp.tcl now use the LIBRARY_SUFFIX.
+
+placement.tcl     - Added support for congestion and timing-driven placement.
+
+
+place_pins.tcl    - Added check_mv_design -erc_mode and 
+                    check_mv_design -power_connectivity reporting
+
+pre_shaping.tcl   - Minor cleanup of the script.
+                  - Added check_mv_design -erc_mode and 
+                    check_mv_design -power_connectivity reporting
+
+pre_timing.tcl    - Changed loading of block constraints for DP_INTERMEDIATE_LEVEL_BLOCK_REFS.
+
+shaping.tcl       - Conditionally uses either the design with the PLACE_IO_LABEL_NAME or the 
+                    PRE_SHAPING_LABEL_NAME for the starting design.
+  
+
+M-2016.12-SP4 Updates
+=====================
+############################################################
+Updates for rm_setup/icc2_dp_setup.tcl
+############################################################
+
+Removed the variable PLACEMENT_DFF_AWARE since create_placement from 2016.12 and onwards 
+uses Data FLow FLylines (DFF) as the default behavior during placement. 
+
+
+M-2016.12-SP2 Updates
+=====================
+############################################################
+Updates for rm_setup/icc2_dp_setup.tcl
+############################################################
+
+Added the variable COMPRESS_LIBS to enable using compressed libraries when doing a save_lib.
+The default behavior is to not use compressed libraries.
+
+############################################################
+Updates for rm_setup/icc2_dp_setup.tcl
+############################################################
+
+Added the variable CHECK_DESIGN so that check_design pre checks will be run prior to running 
+commands in various DP steps. The default behavior is to run check_design pre checks.
+
+############################################################
+Updates for the following files under rm_icc2_dp_scripts/
+############################################################
+
+Added check_design step to the following scripts: 
+
+    init_dp.tcl
+    pre_shaping.tcl
+    shaping.tcl
+    placement.tcl
+    create_power.tcl
+    place_pins.tcl
+    pre_timing.tcl
+    timing_estimation.tcl
+
+Changed init_dp.tcl to properly handle the setting of reference libraries when MIBs are present.
+
+Added a COPY_LABEL_NAME to view_in_place.tcl to view a design that was previously copied via 
+view_copy.
+
+
+M-2016.12 Updates
+=====================
+############################################################
+Updates for the following files under rm_icc2_dp_scripts/
+############################################################
+
+view_copy.tcl     - Changes made to use *_LABEL_NAME variables instead of hard coded
+                    label names.
+
+view_in_place.tcl - Changes made to use *_LABEL_NAME variables instead of hard coded
+                    label names.
+
+
+L-2016.03-SP4 Updates
+=====================
+############################################################
+Updates for the following files under rm_icc2_dp_scripts/
+############################################################
+
+Changed 'close_lib -purge -force' to 'close_lib -purge -force -all' so all child block libs
+and designs will be closed properly. This affected the following list of files:
+
+    create_power.tcl
+    place_io.tcl
+    placement.tcl
+    place_pins.tcl
+    pre_shaping.tcl
+    pre_timing.tcl
+    shaping.tcl
+    timing_estimation.tcl
+    view_copy.tcl
+
+Added '-ref_libs_for_edit' to 
+'open_block ${WORK_DIR}/${DESIGN_LIBRARY}:${DESIGN_NAME}/${*_LABEL_NAME}'
+to make sure ref libs are editable. This affected the following list of files:
+
+    create_power.tcl
+    place_io.tcl
+    placement.tcl
+    place_pins.tcl
+    pre_shaping.tcl
+    pre_timing.tcl
+    shaping.tcl
+
+Changed init_dp.tcl to get a unique list of ref_libs by using 'lsort -unique ...'.
+Also, changed what is output to stdout by using the proper name for the added 
+reference library: ${ref_lib}.nlib
+
+
+L-2016.03-SP2 Updates
+=====================
+############################################################
+File name / Makefile changes
+############################################################
+
+1. Renamed the rm_icc2_dp_scripts/init_design.tcl file to
+   rm_icc2_dp_scripts/init_dp.tcl.
+
+2. Renamed the init_design target in Makefile_dp_flat to init_dp.
+
+###############################################################################
+Updates for rm_setup/icc2_common_setup.tcl
+###############################################################################
+1. Added the following variable:
+
+   - TCL_PARASITIC_SETUP_FILE
+
+     This variable replaces the TLU_PLUS_FILE variable which was in the
+     rm_setup/icc2_dp_setup.tcl file.
+
+   - RELEASE_LABEL_NAME_DP
+
+     This variable is the label name for the block that is ready for place & route.
+
+###############################################################################
+Updates for rm_setup/icc2_dp_setup.tcl
+###############################################################################
+1. Added the following variables:
+
+   - TCL_USER_INIT_DP_POST_SCRIPT
+
+     Use this variable to define custom commands at the very end of init_dp.tcl,
+     before the "save_lib -all" command.
+
+   - TCL_USER_PRE_SHAPING_PRE_SCRIPT
+
+     Use this variable to define custom commands at the beginning of pre_shaping.tcl.
+
+   - TCL_USER_PRE_SHAPING_POST_SCRIPT
+
+     Use this variable to define custom commands at the very end of pre_shaping.tcl,
+     before the "save_lib -all" command.
+
+   - TCL_USER_PLACE_IO_PRE_SCRIPT
+
+     Use this variable to define custom commands at the beginning of place_io.tcl.
+
+   - TCL_USER_PLACE_IO_POST_SCRIPT
+
+     Use this variable to define custom commands at the very end of place_io.tcl,
+     before the "save_lib -all" command.
+
+   - TCL_USER_SHAPING_PRE_SCRIPT
+
+     Use this variable to define custom commands at the beginning of shaping.tcl.
+
+   - TCL_USER_SHAPING_POST_SCRIPT
+
+     Use this variable to define custom commands at the very end of shaping.tcl,
+     before the "save_lib -all" command.
+
+   - TCL_USER_PLACEMENT_PRE_SCRIPT
+
+     Use this variable to define custom commands at the beginning of placement.tcl.
+
+   - TCL_USER_PLACEMENT_POST_SCRIPT
+
+     Use this variable to define custom commands at the very end of placement.tcl,
+     before the "save_lib -all" command.
+
+   - TCL_USER_CREATE_POWER_PRE_SCRIPT
+
+     Use this variable to define custom commands at the beginning of create_power.tcl.
+
+   - TCL_USER_CREATE_POWER_POST_SCRIPT
+
+     Use this variable to define custom commands at the very end of create_power.tcl,
+     before the "save_lib -all" command.
+
+   - TCL_USER_PLACE_PINS_PRE_SCRIPT
+
+     Use this variable to define custom commands at the beginning of place_pins.tcl.
+
+   - TCL_USER_PLACE_PINS_POST_SCRIPT
+
+     Use this variable to define custom commands at the very end of place_pins.tcl,
+     before the "save_lib -all" command.
+
+   - TCL_USER_PRE_TIMING_PRE_SCRIPT
+
+     Use this variable to define custom commands at the beginning of pre_timing.tcl.
+
+   - TCL_USER_PRE_TIMING_POST_SCRIPT
+
+     Use this variable to define custom commands at the very end of pre_timing.tcl,
+     before the "save_lib -all" command.
+
+   - TCL_USER_TIMING_ESTIMATION_PRE_SCRIPT
+
+     Use this variable to define custom commands at the beginning of timing_estimation.tcl.
+
+   - TCL_USER_TIMING_ESTIMATION_POST_SCRIPT
+
+     Use this variable to define custom commands at the very end of timing_estimation.tcl,
+     before the "save_lib -all" command.
+
+   - TIMING_PIN_PLACEMENT
+
+     Use this variable to use or not use timing-driven pin placement.
+     The default value is false.
+
+   - FLOORPLAN_STYLE
+
+     Use this variable to choose "abutted" or "channel" floorplan styles.
+     The default value is "channel". The value of this variable will cause the
+     SHAPING_CMD_OPTIONS variable to be set accordingly.
+
+   * The Design Planning RM is moving away from using the UNIX copy
+     command to copy a work directory from one design planning step to
+     the next. Instead, the following variables define labels to use
+     with the rename_block command when changing the name of a block.
+
+     - SPLIT_CONSTRAINTS_LABEL_NAME    split_constraints
+     - INIT_DP_LABEL_NAME              init_dp
+     - PRE_SHAPING_LABEL_NAME          pre_shaping
+     - PLACE_IO_LABEL_NAME             place_io
+     - SHAPING_LABEL_NAME              shaping
+     - PLACEMENT_LABEL_NAME            placement
+     - CREATE_POWER_LABEL_NAME         create_power
+     - PLACE_PINS_LABEL_NAME           place_pins
+     - PRE_TIMING_LABEL_NAME           pre_timing
+     - TIMING_ESTIMATION_LABEL_NAME    timing_estimation
+     - WRITE_DATA_LABEL_NAME           timing_estimation
+
+2. Removed the following variables:
+
+   - WORK_DIR_SPLIT_CONSTRAINTS
+   - WORK_DIR_INIT_DESIGN
+   - WORK_DIR_PRE_SHAPING
+   - WORK_DIR_PLACE_IO
+   - WORK_DIR_SHAPING
+   - WORK_DIR_PLACEMENT
+   - WORK_DIR_CREATE_POWER
+   - WORK_DIR_PLACE_PINS
+   - WORK_DIR_PRE_TIMING
+   - WORK_DIR_TIMING_ESTIMATION
+   - TLU_PLUS_FILE
+
+3. Renamed the following variable:
+
+   - REPORTS_DIR_INIT_DESIGN changed to REPORTS_DIR_INIT_DP
+
+     Also changed the value of this variable
+     from $REPORTS_DIR/init_design to $REPORTS_DIR/init_dp
+
+4. Changed the value of the following variable:
+
+   - WORK_DIR_WRITE_DATA
+
+     Changed the value from work/write_data to ./write_data_dir
+
+
+L-2016.03 Updates
+=================
+############################################################
+RM structure change
+############################################################
+* The Design Planning Reference Methodology structure has changed significantly
+  in 2016.03 as design planning has been split to support both hierarchical
+  and flat flows; the default DP_FLOW is "hier". Change this variable setting to
+  "flat" to use the flat DP flow. There are now two Makefiles:
+
+  1) Makefile_dp_hier - for hierarchical design planning
+  2) Makefile_dp_flat - for flat design planning
+
+  icc2_hier_setup.tcl has been replaced with icc2_dp_setup.tcl
+
+  The former rm_icc2_hier_scripts directory has been renamed to rm_icc2_dp_scripts.
+
+  Please check README.ICC2-FLAT-DP-RM.txt for details on the related changes to
+  the RM structure, Makefile targets, scripts, and variables.
+
+
+K-2015.06-SP4 Updates
+=====================
+############################################################
+Updates for icc2_hier_setup.tcl and hier_place.tcl
+############################################################
+* Placement-aware Data Flow Flylines (DFF) feature is added for macro
+  placement. If you set PLACEMENT_DFF_AWARE to true,
+  create_placement uses DFF during placement. When set to false
+  (default value), normal placement will be done. Designs with strong
+  macro-to-macro Data Flow Flyline connections may benefit from DFF
+  based macro placement.
+
+############################################################
+Updates for write_data.tcl
+############################################################
+* Remove estimated corners for top level
+
+
+K-2015.06
+=====================
+* write_data step is updated for a better hand-off between the design
+  planning flow and flat flow.
+
+
+Pre-2015.06 Incremental Updates #1
+======================================
+* The clock_trunk_planning step is removed
+
+
+J-2014.12-1 (Jan 23, 2015)
+============================
+* The create_power step adds characterize_block_pg command
+
+* The plan_hier_interfaces step is changed to place_pins step
+
+* The timing_abstracts step is new in this release
+
+* The vipo step is changed to hier_opt step
+	- The virtual_ipo command is changed to estimate_timing
+	- The option name with vipo is changed to estimated_timing
+
+* The clock_trunk_planning step is new in this release
+
+
+J-2014.06-SP1
+=============
+There are no updates in this release.

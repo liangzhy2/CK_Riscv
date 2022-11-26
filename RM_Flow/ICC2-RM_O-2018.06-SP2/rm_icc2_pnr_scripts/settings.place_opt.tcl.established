@@ -1,0 +1,20 @@
+puts "RM-info: Running script [info script]\n"
+
+##########################################################################################
+# Tool: IC Compiler II
+# Script: settings.place_opt.tcl.established
+# Version: O-2018.06-SP2 (October 8, 2018)
+# Copyright (C) 2014-2018 Synopsys, Inc. All rights reserved.
+##########################################################################################
+
+##################################################################################################
+## 				Routing settings						##
+##################################################################################################
+## Set max routing layer
+if {$MAX_ROUTING_LAYER != ""} {set_ignored_layers -max_routing_layer $MAX_ROUTING_LAYER}
+
+## Set min routing layer
+if {$MIN_ROUTING_LAYER != ""} {set_ignored_layers -min_routing_layer $MIN_ROUTING_LAYER}
+
+puts "RM-info: Completed script [info script]\n"
+

@@ -1,0 +1,111 @@
+##########################################################################################
+# Tool: IC Compiler II
+# Script: Makefile_dp_hier
+# Version: O-2018.06-SP2 (October 8, 2018)
+# Copyright (C) 2014-2018 Synopsys, Inc. All rights reserved.
+##########################################################################################
+
+ICC2_EXEC = icc2_shell
+LOGS_DIR = logs_icc2
+# To not use the place_io target, change the value of PLACE_IO to false
+PLACE_IO = true
+# To use the Clock Trunk Planning capability, change the value of CTP to true
+CTP = false
+OPTIONS = 
+
+##Optional: Specify design library if you want backup step and clean step to use it
+##CAUTION: if added, the clean step will delete it
+DESIGN_LIB =
+
+console:
+	$(ICC2_EXEC)
+
+setup:
+	test -d $(LOGS_DIR)	|| mkdir $(LOGS_DIR)
+	touch setup
+
+split_constraints: setup
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/split_constraints.tcl | tee -i $(LOGS_DIR)/split_constraints.log
+
+init_dp: setup split_constraints
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/init_dp.tcl | tee -i $(LOGS_DIR)/init_dp.log
+
+pre_shaping: setup init_dp split_constraints
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/pre_shaping.tcl | tee -i $(LOGS_DIR)/pre_shaping.log
+
+ifeq ($(PLACE_IO),true)
+place_io: setup pre_shaping
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/place_io.tcl | tee -i $(LOGS_DIR)/place_io.log
+
+shaping: setup place_io 
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/shaping.tcl | tee -i $(LOGS_DIR)/shaping.log
+else
+shaping: setup pre_shaping 
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/shaping.tcl | tee -i $(LOGS_DIR)/shaping.log
+endif
+
+placement: setup shaping 
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/placement.tcl | tee -i $(LOGS_DIR)/placement.log
+
+create_power: setup placement
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/create_power.tcl | tee -i $(LOGS_DIR)/create_power.log
+
+ifeq ($(CTP),true)
+clock_trunk_planning: setup create_power
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/clock_trunk_planning.tcl | tee -i $(LOGS_DIR)/clock_trunk_planning.log
+
+place_pins: setup clock_trunk_planning
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/place_pins.tcl | tee -i $(LOGS_DIR)/place_pins.log
+else
+place_pins: setup create_power
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/place_pins.tcl | tee -i $(LOGS_DIR)/place_pins.log
+endif
+
+pre_timing: setup place_pins
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/pre_timing.tcl | tee -i $(LOGS_DIR)/pre_timing.log
+
+timing_estimation: setup pre_timing
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/timing_estimation.tcl | tee -i $(LOGS_DIR)/timing_estimation.log
+
+ifeq ($(CTP),true)
+budgeting: setup timing_estimation
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/budgeting_estimated.tcl | tee -i $(LOGS_DIR)/budgeting_estimated.log
+
+else
+budgeting: setup timing_estimation
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/budgeting.tcl | tee -i $(LOGS_DIR)/budgeting.log
+endif
+
+write_data: setup budgeting
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/write_data.tcl | tee -i $(LOGS_DIR)/write_data.log
+
+all: setup write_data
+	date > all
+
+
+################################################################################################################
+# Utilities Section
+################################################################################################################
+export: setup
+	$(ICC2_EXEC) $(OPTIONS) -f ./rm_icc2_dp_scripts/export.tcl | tee -i $(LOGS_DIR)/export.log
+
+view_copy:
+	$(ICC2_EXEC) $(OPTIONS) -x "source ./rm_icc2_dp_scripts/view_copy.tcl" | tee -i $(LOGS_DIR)/view_copy.log
+
+view_in_place:
+	$(ICC2_EXEC) $(OPTIONS) -x "source ./rm_icc2_dp_scripts/view_in_place.tcl" | tee -i $(LOGS_DIR)/view_in_place.log
+
+##Backup
+BACKUP  = BACKUP.`date "+%m_%d_%H_%M"`
+backup:
+	rm -rf $(BACKUP)
+	mkdir -p $(BACKUP)
+	cp -rf $(DESIGN_LIB) $(LOGS_DIR) $(BACKUP)
+
+clean:
+	rm -rf init_dp pre_shaping place_io shaping placement create_power clock_trunk_planning place_pins pre_timing timing_estimation budgeting write_data write_data_dir export all
+	rm -rf *.err *.log
+
+clean_all: clean
+	rm -rf setup split_constraints $(LOGS_DIR) ./rpts_icc2 ./outputs_icc2 ./images ./split ./block_budgets
+	rm -rf icc2_output.txt check_design*ems ./block_pg ./pgroute_output ./work ./work_dir 

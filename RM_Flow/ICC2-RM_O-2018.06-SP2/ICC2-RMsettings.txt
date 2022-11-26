@@ -1,0 +1,12 @@
+##############################################################
+# Reference methodology option settings selected by the user.
+#
+# Copyright (C) 2018 Synopsys, Inc. All rights reserved.
+##############################################################
+ 
+Option Name:  Setting
+=====================
+Multivoltage or Multisupply:  UPF_PRIME
+Technology Node:  ESTABLISHED
+Lynx Compatible:  FALSE
+
